@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: mushroom.ma
-//Last modified: Tue, Jun 30, 2020 12:51:49 AM
+//Last modified: Tue, Jun 30, 2020 12:53:38 AM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "72088A81-4824-984E-6045-5DBF921F887F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.52618667473931158 14.24374701276475 38.265242594780261 ;
-	setAttr ".r" -type "double3" -3.3383527297650306 358.59999999991635 2.4855503070595022e-17 ;
+	setAttr ".t" -type "double3" 54.200893952974482 8.6224661801700471 26.967095984915353 ;
+	setAttr ".r" -type "double3" 3.2616472702829573 423.7999999997129 -4.5024242902440137e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9871CA7F-4415-1C33-677D-F59D57841F77";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 37.848467540053221;
+	setAttr ".coi" 60.062104940579772;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1083,6 +1083,27 @@ createNode polyCircularize -n "polyCircularize10";
 	setAttr ".ix" -type "matrix" 7.2888887389500967 0 0 0 0 19.619752377109783 0 0 0 0 6.9881270850291859 0
 		 0 10.146341463414636 0 1;
 	setAttr ".nor" 2;
+createNode polyCircularize -n "polyCircularize11";
+	rename -uid "96325E97-4183-FB0C-2F39-7FBEC8FBC0C9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 20 "e[485]" "e[487]" "e[489]" "e[492]" "e[499]" "e[503]" "e[510]" "e[514]" "e[521]" "e[525]" "e[532]" "e[536]" "e[543]" "e[547]" "e[554]" "e[558]" "e[565]" "e[569]" "e[573]" "e[575:577]";
+	setAttr ".ix" -type "matrix" 7.2888887389500967 0 0 0 0 19.619752377109783 0 0 0 0 6.9881270850291859 0
+		 0 10.146341463414636 0 1;
+	setAttr ".nor" 2;
+createNode polyCircularize -n "polyCircularize12";
+	rename -uid "3A989899-49A9-3605-76E7-DFBF7DB8E699";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 13 "e[498]" "e[506]" "e[508]" "e[517]" "e[519]" "e[528]" "e[530]" "e[539]" "e[541]" "e[550]" "e[552]" "e[561]" "e[563:564]";
+	setAttr ".ix" -type "matrix" 7.2888887389500967 0 0 0 0 19.619752377109783 0 0 0 0 6.9881270850291859 0
+		 0 10.146341463414636 0 1;
+	setAttr ".nor" 2;
+createNode polySoftEdge -n "polySoftEdge1";
+	rename -uid "A354F795-4B81-4933-0FC1-0EB2B9824C0E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 7.2888887389500967 0 0 0 0 19.619752377109783 0 0 0 0 6.9881270850291859 0
+		 0 10.146341463414636 0 1;
+	setAttr ".a" 180;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1116,7 +1137,7 @@ connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape1.ws";
 connectAttr ":frontShape.msg" "imagePlaneShape1.ltc";
-connectAttr "polyCircularize10.out" "mushroomShape.i";
+connectAttr "polySoftEdge1.out" "mushroomShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1161,6 +1182,12 @@ connectAttr "polyCircularize8.out" "polyCircularize9.ip";
 connectAttr "mushroomShape.wm" "polyCircularize9.mp";
 connectAttr "polyCircularize9.out" "polyCircularize10.ip";
 connectAttr "mushroomShape.wm" "polyCircularize10.mp";
+connectAttr "polyCircularize10.out" "polyCircularize11.ip";
+connectAttr "mushroomShape.wm" "polyCircularize11.mp";
+connectAttr "polyCircularize11.out" "polyCircularize12.ip";
+connectAttr "mushroomShape.wm" "polyCircularize12.mp";
+connectAttr "polyCircularize12.out" "polySoftEdge1.ip";
+connectAttr "mushroomShape.wm" "polySoftEdge1.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "mushroomShape.iog" ":initialShadingGroup.dsm" -na;
 // End of mushroom.ma

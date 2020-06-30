@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: mothWorld.ma
-//Last modified: Mon, Jun 29, 2020 06:51:28 PM
+//Last modified: Mon, Jun 29, 2020 06:56:42 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F3CE4ADE-4A66-4AEB-B707-FCB436039584";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.367383558400894 12.208859548001616 23.518501181439447 ;
+	setAttr ".t" -type "double3" 13.49340751515275 15.518614321252809 50.53593679678302 ;
 	setAttr ".r" -type "double3" -6.9383527296024692 6.5999999999991674 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "598B19D7-4E5B-D633-0ABC-40A3E8FFE53B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 32.501873992158643;
+	setAttr ".coi" 59.900201124786321;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
-//Name: moth2rigCorrect.ma
-//Last modified: Wed, Jul 15, 2020 02:32:03 PM
+//Name: moth2rigCorrectWinged.ma
+//Last modified: Wed, Jul 15, 2020 02:32:34 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
@@ -14,7 +14,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "6133EA9B-4626-A8B0-3489-2E83816CE22C";
+fileInfo "UUID" "6BB6E9B8-4DF3-D364-8E30-83A2EA1AB947";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
@@ -9467,21 +9467,7 @@ createNode clusterHandle -n "cluster4HandleShape" -p "cluster4Handle";
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" 3.4634027481079102 3.8729701042175293 -0.91009733080863953 ;
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "CBD14B96-4325-823E-AE3E-F485FAB12289";
-createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
-	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
-	setAttr ".t" -type "double3" 0.50228137862533595 0.74675226211547929 0.45383930206298684 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
-	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
-	setAttr ".radi" 0.60801549825361401;
+	rename -uid "590099F4-41D9-4611-F4A5-E399C1F70926";
 createNode joint -n "LWingInnerJoint" -p "BaseRigRNfosterParent1";
 	rename -uid "E0A8FB0C-455E-E8D2-77DC-D49FEE7B9DAA";
 	setAttr ".t" -type "double3" 0.50228137862533595 0.74675226211547763 -0.48007553815841797 ;
@@ -9496,6 +9482,20 @@ createNode joint -n "LWingOuterJoint" -p "LWingInnerJoint";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -3.1339670733589173 -14.657351842841051 ;
 	setAttr ".radi" 0.60801552505746892;
+createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
+	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
+	setAttr ".t" -type "double3" 0.50228137862533595 0.74675226211547929 0.45383930206298684 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
+	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
+	setAttr ".radi" 0.60801549825361401;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "5C7444AA-4303-A794-6E56-56A48F474BBF";
 	setAttr -s 7 ".lnk";
@@ -9614,9 +9614,9 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN"
 		"BaseRigRN" 0
 		"BaseRigRN" 14
-		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"-s -r "
 		0 "|BaseRigRNfosterParent1|RWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -9745,7 +9745,7 @@ createNode groupParts -n "cluster4GroupParts";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[1660:1661]";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "9C04CE30-4A24-C55C-9936-D3B5C52AD84A";
+	rename -uid "A390BDF3-4A6F-94C8-A0B2-0CBDE9C1C339";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -785.71425449280639 -3.5714284295127543 ;
 	setAttr ".tgi[0].vh" -type "double2" 757.14282705670462 85.714282308306167 ;
@@ -9807,14 +9807,14 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[18].x" -414.28570556640625;
 	setAttr ".tgi[0].ni[18].y" 125.71428680419922;
 	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" -414.28570556640625;
-	setAttr ".tgi[0].ni[19].y" 24.285715103149414;
+	setAttr ".tgi[0].ni[19].x" -261.42855834960938;
+	setAttr ".tgi[0].ni[19].y" 74.285713195800781;
 	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" -261.42855834960938;
+	setAttr ".tgi[0].ni[20].x" 45.714286804199219;
 	setAttr ".tgi[0].ni[20].y" 74.285713195800781;
 	setAttr ".tgi[0].ni[20].nvs" 18304;
-	setAttr ".tgi[0].ni[21].x" 45.714286804199219;
-	setAttr ".tgi[0].ni[21].y" 74.285713195800781;
+	setAttr ".tgi[0].ni[21].x" -414.28570556640625;
+	setAttr ".tgi[0].ni[21].y" 24.285715103149414;
 	setAttr ".tgi[0].ni[21].nvs" 18304;
 	setAttr ".tgi[0].ni[22].x" -261.42855834960938;
 	setAttr ".tgi[0].ni[22].y" 74.285713195800781;
@@ -9887,9 +9887,9 @@ connectAttr "cluster4GroupId.id" "mainBody1Shape.iog.og[8].gid";
 connectAttr "cluster4Set.mwc" "mainBody1Shape.iog.og[8].gco";
 connectAttr "cluster4.og[0]" "mainBody1Shape.i";
 connectAttr "tweak1.vl[0].vt[0]" "mainBody1Shape.twl";
+connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
 connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.s" "|BaseRigRNfosterParent1|RWingInnerJoint|RWingInnerJoint.is"
 		;
-connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -10004,13 +10004,13 @@ connectAttr "cluster1Handle.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn";
 connectAttr "cluster1HandleShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
 		;
 connectAttr "cluster4Handle.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn";
-connectAttr "cluster4HandleShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
 		;
-connectAttr "LWingInnerJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+connectAttr "LWingOuterJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
 		;
-connectAttr "LWingOuterJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+connectAttr "cluster4HandleShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
 		;
-connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+connectAttr "LWingInnerJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
 		;
 connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint|RWingInnerJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
 		;
@@ -10025,4 +10025,4 @@ connectAttr "wingColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "cowlColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "bodyColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of moth2rigCorrect.ma
+// End of moth2rigCorrectWinged.ma

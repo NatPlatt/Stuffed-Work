@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: moth2rigDefeatAnimation2.ma
-//Last modified: Thu, Jul 30, 2020 09:59:18 PM
+//Last modified: Thu, Jul 30, 2020 10:35:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
@@ -14,18 +14,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "06C4E356-459F-7257-6CA1-A0BC9D220FD0";
+fileInfo "UUID" "69F870AD-43DB-0F00-52F6-99855A56D48A";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.2492968075660484 5.2897330976653061 6.0795307185829328 ;
-	setAttr ".r" -type "double3" 704.6616467028216 10820.999999979338 4.2585440294586059e-16 ;
+	setAttr ".t" -type "double3" -0.68932234480196741 5.9529123224396621 13.391308964751477 ;
+	setAttr ".r" -type "double3" 714.26164670281867 10801.399999979099 1.2427751535186269e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 7.6844139314971356;
+	setAttr ".coi" 14.667156262461626;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9453,25 +9453,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "94C8B884-425A-1A6F-0736-728670C9489F";
-createNode transform -n "RWingCtrlGrp" -p "BaseRigRNfosterParent1";
-	rename -uid "A780C223-4394-856A-BFE0-6E92FDDBBC6C";
-	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
-	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
-	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
-createNode transform -n "RWingCtrl" -p "RWingCtrlGrp";
-	rename -uid "84EFE7F6-46A0-CE2E-C702-71BBB7B9C780";
-createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
-	rename -uid "E747D0E8-4CBA-A959-B860-0B9D35B4247C";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -1.6420564638291653 0.28457495690312173 
-		-0.12187143537643785 -1.5410205129754668 0.69759713902863463 -0.085219671576726386 
-		-1.4399845621217717 1.0511063737237039 -0.051301622180200512 -1.3981341009909078 
-		1.1380217457280926 -0.039986020514100586 -1.4399845621217717 0.90742940890033053 
-		-0.057901392568018628 -1.541020512975467 0.4944072267748183 -0.094553156367727986 
-		-1.6420564638291653 0.14089799207974824 -0.12847120576425586 -1.6839069249600274 
-		0.053982620075360185 -0.13978680743035574 0 0 0 0 0 0 0 0 0;
+	rename -uid "5076E4DC-4638-7D00-C57F-858DE250B051";
 createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
 	rename -uid "A9713D8D-4975-D17B-8FC1-9AB3D889E836";
 	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
@@ -9490,6 +9472,80 @@ createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
 		0.046510701026848622 0.86850611262776323 -0.036466827865662924 0.04651070102685062 
 		0.86850611262776434 -0.036466827865662924 0.046510701026848622 0.86850611262776445 
 		-0.036466827865662924 0.046510701026849101 0 0 0 0 0 0 0 0 0;
+createNode transform -n "RWingCtrlGrp" -p "BaseRigRNfosterParent1";
+	rename -uid "A780C223-4394-856A-BFE0-6E92FDDBBC6C";
+	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
+	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
+	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
+createNode transform -n "RWingCtrl" -p "RWingCtrlGrp";
+	rename -uid "84EFE7F6-46A0-CE2E-C702-71BBB7B9C780";
+createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
+	rename -uid "E747D0E8-4CBA-A959-B860-0B9D35B4247C";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -1.6420564638291653 0.28457495690312173 
+		-0.12187143537643785 -1.5410205129754668 0.69759713902863463 -0.085219671576726386 
+		-1.4399845621217717 1.0511063737237039 -0.051301622180200512 -1.3981341009909078 
+		1.1380217457280926 -0.039986020514100586 -1.4399845621217717 0.90742940890033053 
+		-0.057901392568018628 -1.541020512975467 0.4944072267748183 -0.094553156367727986 
+		-1.6420564638291653 0.14089799207974824 -0.12847120576425586 -1.6839069249600274 
+		0.053982620075360185 -0.13978680743035574 0 0 0 0 0 0 0 0 0;
+createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
+	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 3;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 4;
+	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
+	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
+	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
+	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
+	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode joint -n "LWingInnerJoint" -p "BaseRigRNfosterParent1";
 	rename -uid "E0A8FB0C-455E-E8D2-77DC-D49FEE7B9DAA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -9547,62 +9603,6 @@ createNode scaleConstraint -n "LWingInnerJoint_scaleConstraint1" -p "LWingInnerJ
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
-	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
-	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
-	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
-	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
-	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
-	setAttr -k on ".w0";
-createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "6CFDA418-4A91-CE5E-22D9-6F85BBCCBEB0";
 	setAttr -s 9 ".lnk";
@@ -9637,7 +9637,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 611\n            -height 811\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 913\n            -height 811\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
 		+ "            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n"
@@ -9660,8 +9660,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 611\\n    -height 811\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 611\\n    -height 811\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 913\\n    -height 811\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 913\\n    -height 811\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -9712,7 +9712,7 @@ createNode materialInfo -n "materialInfo5";
 	rename -uid "A5CD525B-4135-545D-D74B-B6A6329832C2";
 createNode reference -n "BaseRigRN";
 	rename -uid "1F101DA8-4F73-45D1-5FB4-8AB2897636F0";
-	setAttr -s 229 ".phl";
+	setAttr -s 232 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -9942,17 +9942,20 @@ createNode reference -n "BaseRigRN";
 	setAttr ".phl[227]" 0;
 	setAttr ".phl[228]" 0;
 	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 508
-		0 "|BaseRigRNfosterParent1|RWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"-s -r "
+		"BaseRigRN" 514
 		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
-		0 "|BaseRigRNfosterParent1|LWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		0 "|BaseRigRNfosterParent1|RWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
 		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|LWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
 		"-s -r "
 		2 "|BaseRig:Root_J" "visibility" " 1"
 		2 "|BaseRig:Root_J" "useObjectColor" " 1"
@@ -10092,7 +10095,7 @@ createNode reference -n "BaseRigRN";
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L" 
 		"lockInfluenceWeights" " 0"
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape" 
-		"uvPivot" " -type \"double2\" 0.58869270980358124 0.62837082147598267"
+		"uvPivot" " -type \"double2\" 0.45297406737031098 0.26095067308058961"
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R" 
@@ -10107,6 +10110,10 @@ createNode reference -n "BaseRigRN";
 		"objectColor" " 6"
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R" 
 		"lockInfluenceWeights" " 0"
+		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape" 
+		"uvPivot" " -type \"double2\" 0.49753249995099491 0.50058098177445831"
+		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
 		"useObjectColor" " 1"
 		2 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J" 
@@ -10490,6 +10497,8 @@ createNode reference -n "BaseRigRN";
 		
 		3 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "BaseRig:polyPlanarProj2.output" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
+		""
 		3 "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "BaseRig:polyPlanarProj1.output" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.inMesh" 
@@ -10636,321 +10645,327 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[70]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.objectColorRGB" 
 		"BaseRigRN.placeHolderList[71]" ""
+		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
+		"BaseRigRN.placeHolderList[72]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups" 
-		"BaseRigRN.placeHolderList[72]" ":initialShadingGroup.dsm"
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
-		"BaseRigRN.placeHolderList[73]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.lockInfluenceWeights" 
+		"BaseRigRN.placeHolderList[73]" ":initialShadingGroup.dsm"
+		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
 		"BaseRigRN.placeHolderList[74]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
 		"BaseRigRN.placeHolderList[75]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[76]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.worldMatrix" 
 		"BaseRigRN.placeHolderList[77]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.objectColorRGB" 
 		"BaseRigRN.placeHolderList[78]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.message" 
 		"BaseRigRN.placeHolderList[79]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[80]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.worldMatrix" 
 		"BaseRigRN.placeHolderList[81]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.objectColorRGB" 
 		"BaseRigRN.placeHolderList[82]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[83]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
 		"BaseRigRN.placeHolderList[84]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[85]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[86]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[87]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
 		"BaseRigRN.placeHolderList[88]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[89]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[90]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[91]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
 		"BaseRigRN.placeHolderList[92]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[93]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[94]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[95]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
 		"BaseRigRN.placeHolderList[96]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[97]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[98]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
 		"BaseRigRN.placeHolderList[99]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[100]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.worldMatrix" 
 		"BaseRigRN.placeHolderList[101]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.objectColorRGB" 
 		"BaseRigRN.placeHolderList[102]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[103]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.message" 
 		"BaseRigRN.placeHolderList[104]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[105]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[106]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[107]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[108]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[109]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[110]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[111]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[112]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.lockInfluenceWeights" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[113]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[114]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.worldMatrix" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.lockInfluenceWeights" 
 		"BaseRigRN.placeHolderList[115]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.objectColorRGB" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.message" 
 		"BaseRigRN.placeHolderList[116]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.LArmIKFKSwitch" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.worldMatrix" 
 		"BaseRigRN.placeHolderList[117]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.RArmIKFKSwitch" 
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R|BaseRig:Shoulder_J_R2_RK|BaseRig:Shoulder_J_R_RK|BaseRig:Elbow_J_R_RK|BaseRig:Wrist_J_R_RK.objectColorRGB" 
 		"BaseRigRN.placeHolderList[118]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.LLegIKFKSwich" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.LArmIKFKSwitch" 
 		"BaseRigRN.placeHolderList[119]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.RLegIKFKSwitch" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.RArmIKFKSwitch" 
 		"BaseRigRN.placeHolderList[120]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.LLegIKFKSwich" 
 		"BaseRigRN.placeHolderList[121]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl.RLegIKFKSwitch" 
 		"BaseRigRN.placeHolderList[122]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleX" 
 		"BaseRigRN.placeHolderList[123]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.visibility" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleY" 
 		"BaseRigRN.placeHolderList[124]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.scaleZ" 
 		"BaseRigRN.placeHolderList[125]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL.visibility" 
 		"BaseRigRN.placeHolderList[126]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateX" 
 		"BaseRigRN.placeHolderList[127]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.visibility" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateY" 
 		"BaseRigRN.placeHolderList[128]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.translateZ" 
 		"BaseRigRN.placeHolderList[129]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.visibility" 
 		"BaseRigRN.placeHolderList[130]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateX" 
 		"BaseRigRN.placeHolderList[131]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateY" 
 		"BaseRigRN.placeHolderList[132]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.rotateZ" 
 		"BaseRigRN.placeHolderList[133]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleX" 
 		"BaseRigRN.placeHolderList[134]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleY" 
 		"BaseRigRN.placeHolderList[135]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_L_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_L_IK|BaseRig:Ankle_Ctrl_L_IK.scaleZ" 
 		"BaseRigRN.placeHolderList[136]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateX" 
 		"BaseRigRN.placeHolderList[137]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.visibility" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateY" 
 		"BaseRigRN.placeHolderList[138]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.translateZ" 
 		"BaseRigRN.placeHolderList[139]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.visibility" 
 		"BaseRigRN.placeHolderList[140]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateX" 
 		"BaseRigRN.placeHolderList[141]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleX" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateY" 
 		"BaseRigRN.placeHolderList[142]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleY" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.rotateZ" 
 		"BaseRigRN.placeHolderList[143]" ""
-		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleZ" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleX" 
 		"BaseRigRN.placeHolderList[144]" ""
-		5 3 "BaseRigRN" "BaseRig:polyPlanarProj1.output" "BaseRigRN.placeHolderList[145]" 
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleY" 
+		"BaseRigRN.placeHolderList[145]" ""
+		5 4 "BaseRigRN" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK.scaleZ" 
+		"BaseRigRN.placeHolderList[146]" ""
+		5 3 "BaseRigRN" "BaseRig:polyPlanarProj1.output" "BaseRigRN.placeHolderList[147]" 
 		"BaseRig:EyeMesh_LShape.i"
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[1]" "BaseRigRN.placeHolderList[146]" 
+		5 3 "BaseRigRN" "BaseRig:polyPlanarProj2.output" "BaseRigRN.placeHolderList[148]" 
+		"BaseRig:EyeMesh_RShape.i"
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[1]" "BaseRigRN.placeHolderList[149]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[2]" "BaseRigRN.placeHolderList[147]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[2]" "BaseRigRN.placeHolderList[150]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[3]" "BaseRigRN.placeHolderList[148]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.linearValues[3]" "BaseRigRN.placeHolderList[151]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[1]" "BaseRigRN.placeHolderList[149]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[1]" "BaseRigRN.placeHolderList[152]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[2]" "BaseRigRN.placeHolderList[150]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[2]" "BaseRigRN.placeHolderList[153]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[3]" "BaseRigRN.placeHolderList[151]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[3]" "BaseRigRN.placeHolderList[154]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[4]" "BaseRigRN.placeHolderList[152]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[4]" "BaseRigRN.placeHolderList[155]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[5]" "BaseRigRN.placeHolderList[153]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[5]" "BaseRigRN.placeHolderList[156]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[6]" "BaseRigRN.placeHolderList[154]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[6]" "BaseRigRN.placeHolderList[157]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[7]" "BaseRigRN.placeHolderList[155]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[7]" "BaseRigRN.placeHolderList[158]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[8]" "BaseRigRN.placeHolderList[156]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[8]" "BaseRigRN.placeHolderList[159]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[9]" "BaseRigRN.placeHolderList[157]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[9]" "BaseRigRN.placeHolderList[160]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[10]" "BaseRigRN.placeHolderList[158]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[10]" "BaseRigRN.placeHolderList[161]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[11]" "BaseRigRN.placeHolderList[159]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[11]" "BaseRigRN.placeHolderList[162]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[12]" "BaseRigRN.placeHolderList[160]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[12]" "BaseRigRN.placeHolderList[163]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[13]" "BaseRigRN.placeHolderList[161]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[13]" "BaseRigRN.placeHolderList[164]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[14]" "BaseRigRN.placeHolderList[162]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[14]" "BaseRigRN.placeHolderList[165]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[15]" "BaseRigRN.placeHolderList[163]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[15]" "BaseRigRN.placeHolderList[166]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[16]" "BaseRigRN.placeHolderList[164]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[16]" "BaseRigRN.placeHolderList[167]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[17]" "BaseRigRN.placeHolderList[165]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[17]" "BaseRigRN.placeHolderList[168]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[18]" "BaseRigRN.placeHolderList[166]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[18]" "BaseRigRN.placeHolderList[169]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[19]" "BaseRigRN.placeHolderList[167]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[19]" "BaseRigRN.placeHolderList[170]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[20]" "BaseRigRN.placeHolderList[168]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[20]" "BaseRigRN.placeHolderList[171]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[21]" "BaseRigRN.placeHolderList[169]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[21]" "BaseRigRN.placeHolderList[172]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[22]" "BaseRigRN.placeHolderList[170]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[22]" "BaseRigRN.placeHolderList[173]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[23]" "BaseRigRN.placeHolderList[171]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[23]" "BaseRigRN.placeHolderList[174]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[24]" "BaseRigRN.placeHolderList[172]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[24]" "BaseRigRN.placeHolderList[175]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[25]" "BaseRigRN.placeHolderList[173]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[25]" "BaseRigRN.placeHolderList[176]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[26]" "BaseRigRN.placeHolderList[174]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[26]" "BaseRigRN.placeHolderList[177]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[27]" "BaseRigRN.placeHolderList[175]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[27]" "BaseRigRN.placeHolderList[178]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[28]" "BaseRigRN.placeHolderList[176]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[28]" "BaseRigRN.placeHolderList[179]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[29]" "BaseRigRN.placeHolderList[177]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[29]" "BaseRigRN.placeHolderList[180]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[30]" "BaseRigRN.placeHolderList[178]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[30]" "BaseRigRN.placeHolderList[181]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[31]" "BaseRigRN.placeHolderList[179]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[31]" "BaseRigRN.placeHolderList[182]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[32]" "BaseRigRN.placeHolderList[180]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[32]" "BaseRigRN.placeHolderList[183]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[33]" "BaseRigRN.placeHolderList[181]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[33]" "BaseRigRN.placeHolderList[184]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[34]" "BaseRigRN.placeHolderList[182]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[34]" "BaseRigRN.placeHolderList[185]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[35]" "BaseRigRN.placeHolderList[183]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[35]" "BaseRigRN.placeHolderList[186]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[36]" "BaseRigRN.placeHolderList[184]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[36]" "BaseRigRN.placeHolderList[187]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[37]" "BaseRigRN.placeHolderList[185]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[37]" "BaseRigRN.placeHolderList[188]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[38]" "BaseRigRN.placeHolderList[186]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[38]" "BaseRigRN.placeHolderList[189]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[39]" "BaseRigRN.placeHolderList[187]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[39]" "BaseRigRN.placeHolderList[190]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[40]" "BaseRigRN.placeHolderList[188]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[40]" "BaseRigRN.placeHolderList[191]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[41]" "BaseRigRN.placeHolderList[189]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[41]" "BaseRigRN.placeHolderList[192]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[42]" "BaseRigRN.placeHolderList[190]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[42]" "BaseRigRN.placeHolderList[193]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[43]" "BaseRigRN.placeHolderList[191]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[43]" "BaseRigRN.placeHolderList[194]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[44]" "BaseRigRN.placeHolderList[192]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[44]" "BaseRigRN.placeHolderList[195]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[45]" "BaseRigRN.placeHolderList[193]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[45]" "BaseRigRN.placeHolderList[196]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[194]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[46]" "BaseRigRN.placeHolderList[197]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[47]" "BaseRigRN.placeHolderList[195]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[47]" "BaseRigRN.placeHolderList[198]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[48]" "BaseRigRN.placeHolderList[196]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[48]" "BaseRigRN.placeHolderList[199]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[49]" "BaseRigRN.placeHolderList[197]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[49]" "BaseRigRN.placeHolderList[200]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[50]" "BaseRigRN.placeHolderList[198]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[50]" "BaseRigRN.placeHolderList[201]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[51]" "BaseRigRN.placeHolderList[199]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[51]" "BaseRigRN.placeHolderList[202]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[52]" "BaseRigRN.placeHolderList[200]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[52]" "BaseRigRN.placeHolderList[203]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[53]" "BaseRigRN.placeHolderList[201]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[53]" "BaseRigRN.placeHolderList[204]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[54]" "BaseRigRN.placeHolderList[202]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[54]" "BaseRigRN.placeHolderList[205]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[55]" "BaseRigRN.placeHolderList[203]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[55]" "BaseRigRN.placeHolderList[206]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[56]" "BaseRigRN.placeHolderList[204]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[56]" "BaseRigRN.placeHolderList[207]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[57]" "BaseRigRN.placeHolderList[205]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[57]" "BaseRigRN.placeHolderList[208]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[58]" "BaseRigRN.placeHolderList[206]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[58]" "BaseRigRN.placeHolderList[209]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[59]" "BaseRigRN.placeHolderList[207]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[59]" "BaseRigRN.placeHolderList[210]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[60]" "BaseRigRN.placeHolderList[208]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[60]" "BaseRigRN.placeHolderList[211]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[61]" "BaseRigRN.placeHolderList[209]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[61]" "BaseRigRN.placeHolderList[212]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[62]" "BaseRigRN.placeHolderList[210]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[62]" "BaseRigRN.placeHolderList[213]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[63]" "BaseRigRN.placeHolderList[211]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[63]" "BaseRigRN.placeHolderList[214]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[64]" "BaseRigRN.placeHolderList[212]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[64]" "BaseRigRN.placeHolderList[215]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[65]" "BaseRigRN.placeHolderList[213]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[65]" "BaseRigRN.placeHolderList[216]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[66]" "BaseRigRN.placeHolderList[214]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[66]" "BaseRigRN.placeHolderList[217]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[67]" "BaseRigRN.placeHolderList[215]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[67]" "BaseRigRN.placeHolderList[218]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[68]" "BaseRigRN.placeHolderList[216]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[68]" "BaseRigRN.placeHolderList[219]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[69]" "BaseRigRN.placeHolderList[217]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[69]" "BaseRigRN.placeHolderList[220]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[70]" "BaseRigRN.placeHolderList[218]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[70]" "BaseRigRN.placeHolderList[221]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[71]" "BaseRigRN.placeHolderList[219]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[71]" "BaseRigRN.placeHolderList[222]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[72]" "BaseRigRN.placeHolderList[220]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[72]" "BaseRigRN.placeHolderList[223]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[73]" "BaseRigRN.placeHolderList[221]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[73]" "BaseRigRN.placeHolderList[224]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[74]" "BaseRigRN.placeHolderList[222]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[74]" "BaseRigRN.placeHolderList[225]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[75]" "BaseRigRN.placeHolderList[223]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[75]" "BaseRigRN.placeHolderList[226]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[76]" "BaseRigRN.placeHolderList[224]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[76]" "BaseRigRN.placeHolderList[227]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[77]" "BaseRigRN.placeHolderList[225]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[77]" "BaseRigRN.placeHolderList[228]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[78]" "BaseRigRN.placeHolderList[226]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[78]" "BaseRigRN.placeHolderList[229]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[79]" "BaseRigRN.placeHolderList[227]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[79]" "BaseRigRN.placeHolderList[230]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[80]" "BaseRigRN.placeHolderList[228]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[80]" "BaseRigRN.placeHolderList[231]" 
 		""
-		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[81]" "BaseRigRN.placeHolderList[229]" 
+		5 4 "BaseRigRN" "BaseRig:BaseCharacterSet.angularValues[81]" "BaseRigRN.placeHolderList[232]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -14662,156 +14677,313 @@ createNode polyTweakUV -n "polyTweakUV1";
 	rename -uid "0E9495E5-4C52-080A-8040-6D8930AFBB1D";
 	setAttr ".uopa" yes;
 	setAttr -s 548 ".uvtk";
-	setAttr ".uvtk[0:249]" -type "float2" 0.072004512 -0.49854156 0.10269862
-		 -0.48878646 -0.19389462 -0.54680109 0.095490672 -0.54235578 -0.20048937 -0.49159768
-		 -0.14255056 -0.50796258 -0.18035471 -0.47001138 -0.10271354 -0.46526906 -0.1679953
-		 -0.44875744 0.045694724 -0.41719645 -0.017477551 -0.41958261 0.05574511 -0.36727196
-		 -0.019736476 -0.39936602 0.31076926 -0.31472489 0.25292653 -0.36587337 0.29370117
-		 -0.27571437 0.24014838 -0.35489082 0.26852268 -0.25396648 0.22453816 -0.35389337
-		 0.34774274 -0.2632857 0.34095913 -0.36967602 0.31757092 -0.2683765 0.32803077 -0.38222644
-		 -0.55260623 -0.29682216 -0.50314611 -0.39877266 -0.56983626 -0.32563472 -0.50523031
-		 -0.4204179 -0.5738917 -0.3683373 -0.50041252 -0.44714582 0.3593328 -0.36100101 0.4602055
-		 -0.40887278 0.38397825 -0.40394002 0.48030484 -0.43091404 0.48664564 -0.43648928
-		 0.58734322 -0.43211114 0.53783727 -0.46548527 0.61817491 -0.44315958 0.59880304 -0.48725539
-		 0.65096319 -0.44963831 0.030195517 -0.55255842 -0.16312692 -0.57866752 0.11777013
-		 -0.58263487 -0.087550044 -0.52220225 -0.029005906 -0.4593887 0.11051753 -0.38929218
-		 0.12531647 -0.31621921 0.35730469 -0.24546209 0.33238035 -0.18874201 0.29540628 -0.15670088
-		 0.33961535 -0.16302627 0.29532647 -0.17077771 -0.60816067 -0.21192098 -0.63330406
-		 -0.25483823 -0.63924813 -0.31748348 0.27506667 -0.33456933 0.3113488 -0.3979184 0.41533905
-		 -0.45269954 0.49071014 -0.4958877 0.58029282 -0.52777982 0.021801664 -0.59735137
-		 -0.13482988 -0.60541713 0.13828427 -0.61769742 -0.036807746 -0.53325832 0.038924083
-		 -0.45182779 0.17033228 -0.36114442 0.18953094 -0.26699167 0.40012681 -0.17888144
-		 0.36803871 -0.10639092 0.3201015 -0.064802557 0.33206517 -0.068102568 0.27477002
-		 -0.078593642 -0.65964085 -0.13091296 -0.69198281 -0.18741751 -0.69974858 -0.26842201
-		 0.19692805 -0.30780929 0.24400976 -0.39027238 0.34935027 -0.46500415 0.44713509 -0.52186227
-		 0.56304955 -0.56304967 0.013982603 -0.63629651 -0.1096459 -0.62565911 0.15652418
-		 -0.64597648 0.0084533095 -0.5401417 0.099415869 -0.44207668 0.22369054 -0.33271998
-		 0.24682255 -0.22009844 0.43822849 -0.11588988 0.39981771 -0.029971927 0.34200525
-		 0.020161994 0.3252905 0.019873351 0.25641108 0.0066097006 -0.70575494 -0.055059373
-		 -0.74443007 -0.12431604 -0.75391954 -0.22166651 0.12675598 -0.2806583 0.1835278 -0.38049328
-		 0.29033583 -0.47236705 0.40818948 -0.54205108 0.54748869 -0.59150034 0.0069363788
-		 -0.66770822 -0.088155419 -0.63821316 0.17204112 -0.66606438 0.047133893 -0.54196531
-		 0.15101641 -0.42967495 0.26930407 -0.30401522 0.29579958 -0.17598289 0.47070426 -0.057356298
-		 0.42694294 0.039351679 0.36060733 0.096800953 0.31947184 0.099440537 0.24070841 0.083444983
-		 -0.74535656 0.014454901 -0.78937012 -0.066369116 -0.80042058 -0.17766607 0.066196978
-		 -0.25308543 0.13130365 -0.36811543 0.23976752 -0.47392434 0.37482494 -0.55523992
-		 0.53400755 -0.61173004 0.00084317476 -0.69010866 -0.070862025 -0.64212632 0.18445444
-		 -0.67675304 0.078287467 -0.5379715 0.19249937 -0.41422725 0.30607289 -0.27505314
-		 0.33527598 -0.13501799 0.49677312 -0.0040775165 0.4487446 0.10058531 0.37548733 0.16392878
-		 0.31476456 0.16932288 0.22805759 0.15073422 -0.7774719 0.076562762 -0.82572001 -0.014291644
-		 -0.83809173 -0.13680249 0.016662553 -0.22509016 0.088536188 -0.35273612 0.19889542
-		 -0.46899319 0.34784681 -0.56039149 0.52296114 -0.62253875 -0.0041416809 -0.70226216
-		 -0.058174521 -0.63668418 0.19345891 -0.67706442 0.1011478 -0.52755129 0.22288725
-		 -0.39541343 0.3331126 -0.24587905 0.36429918 -0.097498119 0.51580465 0.043252207
-		 0.46468049 0.15292901 0.38631529 0.22059301 0.3112939 0.22846833 0.21877691 0.20753559
-		 -0.80131966 0.13035291 -0.85261285 0.031340584 -0.86599082 -0.099380136 -0.020707831
-		 -0.19669844 0.056189694 -0.33402431 0.16872421 -0.45707667 0.32789826 -0.55667144
-		 0.51464319 -0.62295908 -0.0078919157 -0.70320141 -0.050390646 -0.62142086 0.19883311
-		 -0.66627622 0.11515352 -0.51025772 0.24146891 -0.37299833 0.349776 -0.21655536 0.38217342
-		 -0.063632905 0.52733815 0.084067762 0.4743523 0.19579621 0.39285499 0.26609781 0.30915356
-		 0.27607647 0.21310216 0.25316349 -0.81632233 0.17510116 -0.86941493 0.070107102 -0.88342267
-		 -0.065621376 -0.045073822 -0.16795816 0.034971863 -0.31173241 0.14999293 -0.43786818
-		 0.31545103 -0.54346895 0.50927424 -0.61228085 -0.010313354 -0.69224703 -0.047686517
-		 -0.59612584 0.20044369 -0.64394188 0.11996619 -0.48581815 0.24781623 -0.34683704
-		 0.35567147 -0.18715703 0.38847634 -0.033543944 0.5310998 0.11795071 0.47752094 0.22883148
-		 0.39496821 0.30001959 0.30840403 0.31162211 0.21117896 0.28720853 -0.82211941 0.2102921
-		 -0.87573528 0.10175204 -0.88995773 -0.035659194 -0.055914246 -0.13893433 0.025315598
-		 -0.28570187 0.14316045 -0.41125417 0.31079507 -0.52040958 0.50699472 -0.59006977
-		 -0.011345439 -0.66902161 -0.050108522 -0.56084228 0.19824976 -0.60989857 0.11547898
-		 -0.45413604 0.24179408 -0.31687671 0.35067287 -0.15776598 0.38307011 -0.0072593689
-		 0.52701128 0.1446462 0.4741134 0.25191852 0.39261615 0.3222203 0.30907184 0.33487263
-		 0.21306044 0.30954435 -0.8185724 0.23563874 -0.87143558 0.1261937 -0.88544339 -0.0095348507
-		 -0.053041182 -0.10970421 0.027368084 -0.25586665 0.14839672 -0.37730986 0.31403607
-		 -0.48736399 0.50785923 -0.55617595 -0.010960003 -0.63345468 -0.057571948 -0.51586425
-		 0.19230402 -0.56427193 0.10182321 -0.41529563 0.22356269 -0.28315777 0.3349224 -0.12846565
-		 0.36610526 0.015285492 0.51519239 0.16407266 0.4642275 0.2651858 0.38586235 0.33285031
-		 0.31114936 0.3458958 0.21870562 0.32033357 -0.80576777 0.25109309 -0.85662991 0.14352655
-		 -0.87000769 0.012805685 -0.036601737 -0.080351748 0.04098925 -0.22225519 0.16558
-		 -0.3362956 0.32509273 -0.44444877 0.51183772 -0.51073593 -0.0091645885 -0.58578122
-		 -0.069864213 -0.46172351 0.18275237 -0.50747204 0.079364762 -0.36955497 0.19357678
-		 -0.24581073 0.30882829 -0.099335074 0.33801791 0.034249306 0.49595737 0.17632613
-		 0.44812882 0.2690042 0.37487161 0.3323476 0.31459481 0.3450624;
-	setAttr ".uvtk[250:499]" 0.22798178 0.3200238 -0.7840156 0.25684965 -0.83168304
-		 0.15402263 -0.84405482 0.031512007 -0.0070780814 -0.050961509 0.065753758 -0.18498661
-		 0.19429877 -0.28864604 0.34370142 -0.39202249 0.51881599 -0.45416987 -0.0059997905
-		 -0.52653229 -0.086651638 -0.39917716 0.16982913 -0.44018388 0.048693746 -0.31734315
-		 0.1525763 -0.20505278 0.27305219 -0.070446014 0.29951754 0.049877882 0.46980494 0.18168262
-		 0.42624462 0.26397815 0.35990912 0.32142738 0.31933182 0.33303979 0.24066657 0.30933622
-		 -0.75384498 0.25334483 -0.79720026 0.15812194 -0.80825073 0.046825036 0.034724832
-		 -0.021615818 0.10096279 -0.14427109 0.23385862 -0.23495674 0.36941904 -0.33067739
-		 0.52860165 -0.38716763 -0.0015410352 -0.45652151 -0.10749401 -0.32917944 0.15385389
-		 -0.36334932 0.010609746 -0.25924471 0.10157228 -0.16117971 0.22849205 -0.041854501
-		 0.25157219 0.062501311 0.4373998 0.18059638 0.39915013 0.25093237 0.34133768 0.30106625
-		 0.32525021 0.31077871 0.25645626 0.28924903 -0.71599716 0.24125081 -0.75401646 0.15642548
-		 -0.763506 0.059075221 0.087696001 0.0076126978 0.14566104 -0.10040154 0.28329331
-		 -0.17596325 0.40163463 -0.26122218 0.54093409 -0.31067145 0.0041012019 -0.37681669
-		 -0.13186403 -0.25285521 0.13522124 -0.27814719 -0.033906057 -0.19598989 0.041825861
-		 -0.11455932 0.17625746 -0.013597846 0.19538203 0.072522044 0.39954835 0.17369252
-		 0.36755008 0.23088951 0.3196128 0.27247825 0.33220506 0.2794942 0.27496964 0.26097074
-		 -0.6714136 0.22146481 -0.70318031 0.14967728 -0.7109459 0.068672895 0.15044263 0.036665387
-		 0.1986607 -0.053750142 0.34138268 -0.11251995 0.43957776 -0.18466595 0.5554924 -0.22585353
-		 0.010783002 -0.28871432 -0.15917057 -0.17145731 0.11439037 -0.18596271 -0.083720163
-		 -0.12843518 -0.025176229 -0.065621562 0.11763975 0.014313579 0.1323503 0.080405116
-		 0.35716712 0.16176718 0.33225143 0.20504358 0.29527742 0.23708469 0.34001875 0.24064232
-		 0.29575789 0.22590868 -0.6212284 0.19509858 -0.64593631 0.13874477 -0.65188026 0.07609956
-		 0.22132125 0.06550546 0.25856763 -0.0047588348 0.40666676 -0.045562685 0.4823283
-		 -0.10219133 0.57191098 -0.13408339 0.018326983 -0.1936976 -0.18878745 -0.086319275
-		 0.091870718 -0.088364199 -0.13759488 -0.05754865 -0.097757608 -0.01485521 0.054077968
-		 0.041902304 0.064043358 0.086658359 0.31124717 0.14578506 0.29412901 0.17472678 0.26895028
-		 0.19647445 0.34848344 0.19588889 0.31831288 0.185629 -0.56675047 0.16347069 -0.58371091
-		 0.12459266 -0.58776629 0.081890091 0.2984761 0.094123602 0.32381636 0.04606209 0.47747201
-		 0.02392967 0.52882445 -0.015134327 0.58978999 -0.036904335 0.026524708 -0.093397692
-		 -0.22006723 0.0012239814 0.068206243 0.012935773 -0.19423173 0.015611842 -0.1740974
-		 0.037197784 -0.012871213 0.069235682 -0.0078485981 0.091818333 0.26282877 0.12689969
-		 0.25408489 0.14137319 0.24130668 0.15235561 0.35736942 0.14708273 0.34207523 0.14181428
-		 -0.50943565 0.12811613 -0.51809412 0.10825491 -0.52017832 0.086609408 0.37988633
-		 0.12255224 0.39270389 0.098144978 0.55194867 0.095002607 0.57787061 0.075047933 0.60870206
-		 0.06399937 0.035146333 0.010462716 0.047906116 -0.45294425 0.62817669 0.16681492
-		 0.64143288 0.062933877 0.46343338 0.15087415 -0.45079175 0.090812728 0.36644989 0.0962165
-		 0.21303721 0.10648474 -0.081553906 0.096431851 -0.25229844 0.089926451 0.043963619
-		 0.11611713 0.4124434 0.078833297 -0.51547658 0.065293834 0.32915682 0.13201681 0.22575243
-		 0.15876633 -0.010051735 0.11478749 -0.16162732 0.063864067 0.098883927 0.025443822
-		 -0.2599563 -0.47418046 -0.092550248 -0.47253692 0.21105058 -0.45767051 0.36492515
-		 -0.4728564 -0.43486449 -0.47312111 0.53825378 -0.4132607 0.6380142 -0.39725804 0.038960919
-		 -0.50376773 0.56147921 -0.41756976 0.44774783 -0.38719511 -0.49437192 -0.38432318
-		 0.35624343 -0.36716059 0.2616145 -0.38575998 -0.022556104 -0.44491774 -0.22643512
-		 -0.5113973 0.65454507 -0.039280295 0.3628462 0.0077967569 -0.57837629 0.039513811
-		 0.29281467 0.1661544 0.23831888 0.20886536 0.059709892 0.13190916 -0.073033601 0.037546948
-		 0.15249217 -0.063777581 0.66720843 -0.13816309 0.31598234 -0.06124182 -0.63791531
-		 0.0132557 0.25833535 0.19702472 0.25042611 0.25469628 0.12601683 0.14661169 0.011292025
-		 0.01077063 0.20349276 -0.1501136 0.67907643 -0.23207727 0.27310264 -0.12732331 -0.69265372
-		 -0.01363118 0.22656429 0.2231196 0.26172525 0.29433408 0.18722054 0.15778482 0.089213759
-		 -0.016601119 0.25063315 -0.23218741 0.68982446 -0.31944245 0.23534736 -0.18954138
-		 -0.7412681 -0.041218162 0.19827121 0.24307077 0.27189022 0.32607105 0.24178977 0.16442859
-		 0.15875822 -0.044625677 0.29274747 -0.30870271 0.69916952 -0.39879107 0.20372799
-		 -0.24706495 -0.78257233 -0.06950891 0.17413941 0.2556825 0.28063792 0.34844318 0.28835484
-		 0.16567421 0.21817356 -0.073295034 0.32879111 -0.37848109 0.7068758 -0.46881306 0.17910197
-		 -0.29915625 -0.81554753 -0.098451376 0.15475047 0.25996026 0.28773451 0.36025539
-		 0.32574621 0.16080856 0.26597103 -0.10254738 0.35787216 -0.44048774 0.71275616 -0.5284034
-		 0.16215643 -0.34519649 -0.83937329 -0.12795115 0.1405728 0.25513044 0.2929939 0.36059883
-		 0.35302258 0.14928246 0.30095673 -0.13228057 0.37927088 -0.49386474 0.71666968 -0.576693
-		 0.15338871 -0.38470262 -0.85345244 -0.15788108 0.13194741 0.24065618 0.2962783 0.34886536
-		 0.36949283 0.13072455 0.32225496 -0.16236137 0.39245817 -0.53795242 0.71852207 -0.61308122
-		 0.15309355 -0.41734457 -0.85742939 -0.18809181 0.12907858 0.21624665 0.29749674 0.32475641
-		 0.3747333 0.10494494 0.32932481 -0.19263677 0.39710841 -0.57231379 0.71826613 -0.63725132
-		 0.16135618 -0.44295621 -0.85120249 -0.21841884 0.13202907 0.18186025 0.29660505 0.28828666
-		 0.36859611 0.071935534 0.32197273 -0.22294031 0.393105 -0.59674489 0.71590042 -0.64918399
-		 0.17805061 -0.46154338 -0.83492535 -0.24869108 0.14071734 0.13770285 0.29360616 0.23977841
-		 0.35121259 0.031868935 0.30035451 -0.25310084 0.38054326 -0.61128509;
-	setAttr ".uvtk[500:547]" 0.71147227 -0.64916003 0.20284268 -0.47328514 -0.80900401
-		 -0.27873814 0.15492046 0.084220678 0.28855026 0.17985171 0.32299086 -0.014909446
-		 0.26497319 -0.28295019 0.35973033 -0.61621761 0.70507824 -0.63775873 0.23520002 -0.47853458
-		 -0.77408367 -0.30839884 0.17427915 0.022083126 0.28153718 0.1094043 0.28460672 -0.067894936
-		 0.21666968 -0.31233102 0.33117536 -0.6120683 0.69686687 -0.61584622 0.27440727 -0.47781247
-		 -0.73102587 -0.33752847 0.19831154 -0.047834367 0.27271879 0.029584788 0.2369881
-		 -0.12643713 0.15660641 -0.34110507 0.29558247 -0.59959424 0.68704414 -0.58456171
-		 0.31958812 -0.4717977 -0.68088096 -0.36600912 0.22642443 -0.1244773 0.26230371 -0.058239788
-		 0.18129537 -0.18976152 0.086247981 -0.36916319 0.25383288 -0.57976961 0.67588091
-		 -0.54530001 0.36972773 -0.46131647 -0.62484765 -0.3937639 0.25793189 -0.20664373
-		 0.2505638 -0.15253323 0.11889467 -0.25699413 0.007335797 -0.39643952 0.20696735 -0.55376744
-		 0.66371894 -0.499699 0.42370284 -0.44732809 -0.56423199 -0.42077905 0.29207402 -0.29302019
-		 0.23784085 -0.25164446 0.051326707 -0.32718962 -0.078140944 -0.42293489 0.1561631
-		 -0.52293813;
+	setAttr ".uvtk[0:249]" -type "float2" 0.49603155 -0.088230938 0.51940221
+		 -0.069733888 0.44376543 0.15899736 0.4955059 -0.15947196 0.41941604 0.26446706 0.46542701
+		 0.20131665 0.42561159 0.29204318 0.47759649 0.25580001 0.42649004 0.32318631 0.21715304
+		 0.44842258 0.12480248 0.49605066 0.19469783 0.49563628 0.10640469 0.51983154 -0.10518834
+		 0.48257309 -0.20995751 0.46187022 -0.14916985 0.5054878 -0.23816058 0.46891621 -0.20490173
+		 0.51933938 -0.26964667 0.47079298 -0.45187977 0.18070999 -0.49807262 0.085932799
+		 -0.49751151 0.15839571 -0.52106714 0.067365944 -0.44691142 -0.13417137 -0.42313027
+		 -0.23956588 -0.46875107 -0.17675781 -0.42945096 -0.26724607 -0.48116824 -0.23144886
+		 -0.43048015 -0.29845145 -0.20243637 -0.43311521 -0.10930286 -0.48031738 -0.18000774
+		 -0.4798272 -0.090842463 -0.50385207 0.11438911 -0.45355764 0.2193685 -0.4320057 0.15799551
+		 -0.47615674 0.24743509 -0.43884364 0.21345489 -0.48959714 0.278853 -0.4404816 0.44912443
+		 -0.18187419 0.47623679 0.077956542 0.49387321 -0.22712436 0.50835121 0.14055252 0.52616364
+		 0.2205569 0.29400656 0.42451844 0.26100871 0.4941133 -0.025774386 0.5120284 -0.09076786
+		 0.54604018 -0.17261647 0.56631839 -0.42857599 0.26008239 -0.49584448 0.22726741 -0.4789035
+		 -0.053353146 -0.51128834 -0.11633587 -0.52946365 -0.19664711 -0.28009284 -0.40937155
+		 -0.24712595 -0.47822919 0.034554254 -0.48370171 0.099007778 -0.51723683 0.18045369
+		 -0.53691196 0.42550167 -0.26005721 0.50459456 0.0016140686 0.49059454 -0.28949806
+		 0.54667032 0.083295807 0.56970251 0.18677783 0.36476657 0.40045306 0.32204512 0.49094179
+		 0.048827697 0.53740251 -0.035882674 0.58201867 -0.14175747 0.6082297 -0.40505815
+		 0.33338156 -0.49253333 0.29085585 -0.50678563 0.022748746 -0.54922509 -0.059422456
+		 -0.57272518 -0.16330245 -0.35166129 -0.38544992 -0.30896688 -0.47498408 -0.04049442
+		 -0.50975519 0.043535598 -0.55373573 0.14888768 -0.57916927 0.40168998 -0.3321569
+		 0.52765107 -0.068526015 0.48516044 -0.34502649 0.57897586 0.03057085 0.60669857 0.15491235
+		 0.4276168 0.37621358 0.3762401 0.48561272 0.1170845 0.55753374 0.014450648 0.61202347
+		 -0.11276859 0.64355034 -0.38129574 0.39879295 -0.48706824 0.34759423 -0.52937448
+		 0.092624843 -0.58115447 -0.0070458287 -0.60943699 -0.13186555 -0.41532615 -0.36133146
+		 -0.36396363 -0.46958339 -0.10923088 -0.53055096 -0.0073891338 -0.58425188 0.11920118
+		 -0.61484784 0.37766668 -0.39635763 0.54438996 -0.13109227 0.47710928 -0.39230612
+		 0.60401535 -0.016714823 0.63578218 0.12537694 0.4809373 0.35180983 0.42219111 0.47766492
+		 0.1776063 0.57143319 0.059317466 0.63480973 -0.086061746 0.6709047 -0.35728225 0.45469722
+		 -0.47898772 0.39608124 -0.54565752 0.15490195 -0.60582501 0.039887771 -0.6382286
+		 -0.10274965 -0.46946734 -0.3370212 -0.4107146 -0.46156383 -0.17026888 -0.54509264
+		 -0.052853115 -0.60753763 0.091807134 -0.6425736 0.35343334 -0.45103896 0.5539822
+		 -0.18488944 0.46604034 -0.43013868 0.62072301 -0.057792693 0.65577418 0.098533362
+		 0.52334529 0.32727221 0.458698 0.46669772 0.22918595 0.57829702 0.097941756 0.64931577
+		 -0.06199779 0.68910986 -0.33303449 0.49970809 -0.46789044 0.43511727 -0.55480886
+		 0.20838228 -0.62217116 0.08060807 -0.65792 -0.076318204 -0.51270103 -0.31254545 -0.44801894
+		 -0.45052651 -0.22240441 -0.55257034 -0.09208221 -0.6225307 0.067066945 -0.66116393
+		 0.32901332 -0.49481678 0.55579466 -0.22892776 0.45162699 -0.45755672 0.62824386 -0.092046887
+		 0.66571885 0.074678734 0.55373025 0.30264857 0.48479277 0.45238522 0.27083018 0.57751745
+		 0.12970264 0.65469038 -0.040872511 0.69720834 -0.3085888 0.53271139 -0.4534502 0.4637371
+		 -0.5562005 0.25207502 -0.62933844 0.11449759 -0.66755533 -0.052866779 -0.54391533
+		 -0.2879478 -0.47491008 -0.43614438 -0.26464421 -0.55237019 -0.12445648 -0.62837845
+		 0.045276798 -0.66966242 0.30444822 -0.52657801 0.5493992 -0.26244918 0.43362591 -0.47385025
+		 0.62595123 -0.11902598 0.6649133 0.054032248 0.57128006 0.27799746 0.49976534 0.43448415
+		 0.3017835 0.56868786 0.15414478 0.65030932 -0.022906102 0.69449574 -0.28399608 0.55288899
+		 -0.43542245 0.48123041 -0.54940671 0.28522348 -0.62670135 0.1411051 -0.66643155 -0.0326159
+		 -0.56229591 -0.26328477 -0.49067768 -0.41817421 -0.29623216 -0.54408038 -0.14952154
+		 -0.624457 0.026655808 -0.66736436 0.27979288 -0.54550731 0.53457701 -0.2849476 0.41188219
+		 -0.47858518 0.61346126 -0.13845439 0.65292418 0.036730349 0.57549953 0.25338575 0.50317967
+		 0.41283992 0.32154697 0.55160868 0.17098989 0.63579035 -0.0082354974 0.6805383 -0.25931811
+		 0.55973858 -0.41365257 0.48716435 -0.53421187 0.30732095 -0.61387497 0.16015366 -0.65411544
+		 -0.015701689 -0.56734538 -0.23862185 -0.49488625 -0.39646143 -0.31666714 -0.52749795
+		 -0.16699962 -0.61038274 0.011342011 -0.65383708 0.25511131 -0.55110645 0.51131946
+		 -0.2961801 0.38633403 -0.47161108 0.59063745 -0.15023553 0.62959945 0.022822663 0.56622243
+		 0.22888403 0.49488479 0.3873913 0.32989091 0.52628708 0.18013985 0.61099833 0.00308864
+		 0.65518481 -0.23462336 0.55308658 -0.38807788 0.48138908 -0.51061004 0.31812692 -0.59072417
+		 0.1715472 -0.63045454 -0.0021737963 -0.55889553 -0.21402885 -0.48738614 -0.3709439
+		 -0.3257162 -0.50262564 -0.17679296 -0.58602083 -0.00061545591 -0.6289283 0.23047352
+		 -0.54320431 0.47982517 -0.29617682 0.35701296 -0.45306617 0.5575946 -0.15445665 0.59506959
+		 0.012269013 0.54361349 0.20456097 0.47501841 0.3581697 0.32686079 0.49293405 0.18168062
+		 0.57604814 0.011105435 0.61856645 -0.20998175 0.53309035 -0.35873026 0.46404371 -0.4788017
+		 0.31767395 -0.55736279 0.17537209 -0.59557962 0.0080075189 -0.5371083 -0.18957552
+		 -0.46831477 -0.34165418 -0.3234213 -0.46967176 -0.1789881 -0.55148584 -0.0092548188
+		 -0.59276927 0.20594861 -0.52196264 0.4404932 -0.28524014 0.3240436 -0.42337292 0.51469302
+		 -0.15138462 0.54974407 0.0049415869 0.50816578 0.18048072 0.44400254 0.32530132 0.31277907
+		 0.451956 0.17587918 0.53130049 0.01593961 0.57109475 -0.18546118 0.50023609;
+	setAttr ".uvtk[250:499]" -0.3257331 0.43555221 -0.43918768 0.30626824 -0.51415229
+		 0.17189732 -0.54990101 0.014971223 -0.50247508 -0.16532585 -0.43809482 -0.30871537
+		 -0.31010026 -0.4290413 -0.17385197 -0.50713766 -0.014702451 -0.545771 0.18160254
+		 -0.48786968 0.39391401 -0.2639443 0.28763816 -0.38322872 0.46253076 -0.14146395 0.49429792
+		 0.0006277319 0.46068898 0.15669677 0.40253267 0.28899768 0.28824162 0.40394458 0.16317894
+		 0.4773517 0.017799724 0.51344693 -0.16112214 0.45532706 -0.28930014 0.39661178 -0.39235827
+		 0.28448632 -0.46168974 0.1615645 -0.49409327 0.018927094 -0.45580304 -0.14133665
+		 -0.3974227 -0.27234182 -0.28634304 -0.38132617 -0.16182785 -0.4535743 -0.017167667
+		 -0.48861033 0.15749317 -0.44173288 0.34085318 -0.23312429 0.24809469 -0.33358616
+		 0.40193 -0.12530263 0.42965272 -0.00096108951 0.40228912 0.13324744 0.35156128 0.24955806
+		 0.25410679 0.34966168 0.14418919 0.41502163 0.016969936 0.44654843 -0.13701397 0.39946523
+		 -0.24972746 0.34817621 -0.33907923 0.25316697 -0.40079653 0.1449835 -0.4290792 0.020164102
+		 -0.39819741 -0.11765005 -0.34725121 -0.2328306 -0.25300366 -0.32728878 -0.14352524
+		 -0.39161512 -0.016934814 -0.42221102 0.13366449 -0.38465604 0.2822338 -0.19386628
+		 0.20578818 -0.27563307 0.3339186 -0.10366424 0.35695085 -0.00018232525 0.33434579
+		 0.11015353 0.29227492 0.2073563 0.21148562 0.29001752 0.11967413 0.34533456 0.013799326
+		 0.37154588 -0.11317003 0.33402595 -0.20739007 0.29143283 -0.28027108 0.21339938 -0.33250117
+		 0.12291673 -0.35600105 0.019036729 -0.33103672 -0.094290853 -0.28876641 -0.19055757
+		 -0.21118593 -0.26784453 -0.11970754 -0.3222867 -0.014355336 -0.34772038 0.11014377
+		 -0.31801745 0.21911262 -0.14749068 0.1611647 -0.21076003 0.25971335 -0.077449709
+		 0.2775254 0.0025547189 0.2584773 0.08741197 0.22606482 0.16284034 0.16172558 0.22605114
+		 0.090539247 0.26950172 0.0086908508 0.28977999 -0.089602768 0.26062909 -0.16273396
+		 0.22777513 -0.21698931 0.16651091 -0.25801834 0.096267387 -0.27619353 0.015956137
+		 -0.2559396 -0.071259409 -0.22336124 -0.14596722 -0.16223288 -0.20403394 -0.091280051
+		 -0.24679968 -0.0098342281 -0.26647466 0.086935677 -0.24343452 0.15264943 -0.095546596
+		 0.11473268 -0.14053506 0.18069793 -0.047686871 0.19286768 0.0067964243 0.17650318
+		 0.064987034 0.15449728 0.11651779 0.10639839 0.15888807 0.057818785 0.18889818 0.0020865365
+		 0.20274979 -0.066295445 0.18109509 -0.11626774 0.15876842 -0.15038732 0.11405149
+		 -0.17873184 0.066063255 -0.19114891 0.011372152 -0.17472629 -0.048527651 -0.15260135
+		 -0.099569917 -0.1077098 -0.13699284 -0.059274711 -0.16653296 -0.003815538 -0.17997333
+		 0.064015299 -0.16272959 0.084050477 -0.039788704 0.067056842 -0.066661566 0.098405063
+		 -0.015511729 0.10460033 0.012064167 0.090394169 0.042805765 0.079278052 0.068952836
+		 0.047278684 0.089690447 0.022659253 0.10504326 -0.0055439882 0.11208899 -0.043195531
+		 0.097401969 -0.068556011 0.086116977 -0.081665613 0.057780661 -0.096170999 0.033441979
+		 -0.10249177 0.0057615042 -0.089370109 -0.026028756 -0.078191496 -0.051929615 -0.049388565
+		 -0.067894429 -0.024836959 -0.083008364 0.0032295804 -0.089846402 0.041320302 -0.077876471
+		 0.49600157 -0.015174929 0.010809891 0.0021531135 0.03207149 -0.087738782 -0.0019328294
+		 -0.0036535896 -0.011967955 -0.00038063526 -0.020208463 0.011619822 -0.013711497 0.019555375
+		 0.0022083404 0.020754382 0.014468172 0.017864406 0.018745523 0.0090607824 -0.059560724
+		 -0.073158577 -0.10000835 -0.02255822 -0.089238763 0.067547798 -0.034578096 0.11013842
+		 0.060632061 0.090435714 0.1020294 0.040247608 0.088118739 -0.048045129 0.37188002
+		 0.32881263 0.053094167 0.49590832 -0.2719354 0.41673592 -0.49807942 0.011652009 -0.37598589
+		 -0.30356881 -0.036783613 -0.48025197 0.28193361 -0.38633648 0.47260353 -0.099565476
+		 0.19739334 -0.42063737 -0.12065181 -0.45672232 -0.41213766 -0.21811223 -0.4750239
+		 0.097219877 -0.18778962 0.45034519 0.13616666 0.47220168 0.40851131 0.24315052 0.053354181
+		 -0.1759524 -0.11578835 -0.14160821 -0.18636851 -0.044778086 -0.15722585 0.12207037
+		 -0.055458438 0.19904464 0.11765832 0.15905768 0.18790929 0.062679447 0.15644062 -0.10374865
+		 0.074545898 -0.26090145 -0.16926201 -0.20795867 -0.26947001 -0.066953093 -0.22313641
+		 0.17382777 -0.076229706 0.28468332 0.17193431 0.2255687 0.27053115 0.085077785 0.22266994
+		 -0.1566948 0.095473774 -0.34106657 -0.21871181 -0.27120191 -0.34780636 -0.088933915
+		 -0.28597528 0.22154689 -0.096710518 0.36552748 0.22219308 0.28895512 0.34839234 0.10729894
+		 0.28580317 -0.205614 0.11594368 -0.41499883 -0.2629742 -0.33038732 -0.41994604 -0.11054333
+		 -0.34480566 0.26406276 -0.11670072 0.4401249 0.26726985 0.34826306 0.42006442 0.12917233
+		 0.34489402 -0.24933988 0.13575856 -0.48136309 -0.3010115 -0.38464829 -0.4845688 -0.13159695
+		 -0.3987695 0.30033749 -0.13599895 0.50713122 0.30612832 0.40261725 0.48423102 0.1505152
+		 0.39907792 -0.28683749 0.15472822 -0.53897619 -0.33193833 -0.43322006 -0.54050803
+		 -0.15191182 -0.44711336 0.32948673 -0.15441293 0.56535804 0.33788052 0.45125076 0.53972977
+		 0.17114672 0.44759402 -0.31721976 0.17267732 -0.58685029 -0.35503989 -0.47546628
+		 -0.58679003 -0.17131439 -0.48920736 0.35079888 -0.17176634 0.61381119 0.36181164
+		 0.49352273 0.58559078 0.19089401 0.48980775 -0.33977476 0.18944755 -0.62422109 -0.36979288
+		 -0.51089507 -0.62266564 -0.18964437 -0.52456599 0.36375526 -0.18790191 0.65172285
+		 0.37739557 0.52893984 0.62106806 0.20959792 0.52522886 -0.35397878 0.20490231 -0.65057772
+		 -0.37587899 -0.53917623 -0.64763445 -0.20676169 -0.55286223 0.36804181 -0.20268522
+		 0.67857593 0.38431177 0.5571698 0.64566422 0.22711615 0.55352867 -0.3595157 0.21893172
+		 -0.66567576 -0.3731932 -0.5601508 -0.66146237 -0.22254802 -0.57393873 0.36355793
+		 -0.21600918 0.69412339 0.38245308 0.57805336 0.65914786 0.24332862 0.57454836 -0.35628167
+		 0.23145437 -0.66954815 -0.36184663 -0.57383883 -0.66418892 -0.23691292 -0.58781457
+		 0.35042 -0.2277969 0.69839466 0.37192827 0.59161013 0.66156048 0.25814274 0.58830744
+		 -0.34439018;
+	setAttr ".uvtk[500:547]" 0.24242389 -0.66250527 -0.34216398 -0.58043993 -0.65612936
+		 -0.2497979 -0.59468651 0.32895872 -0.2380061 0.69169945 0.35305995 0.59804207 0.65321887
+		 0.27149704 0.59500492 -0.3241668 0.25183254 -0.64512962 -0.31467575 -0.58033293 -0.63786781
+		 -0.26118127 -0.59492993 0.29970759 -0.24663417 0.67461997 0.3263768 0.59773046 0.63470697
+		 0.28336701 0.59501827 -0.29614356 0.25971657 -0.61826122 -0.28010303 -0.57406884
+		 -0.61024135 -0.27108565 -0.58908737 0.26339084 -0.25372306 0.64799708 0.2925975 0.59122866
+		 0.60686207 0.293771 0.58889645 -0.26104155 0.26616544 -0.58297741 -0.23933624 -0.56236064
+		 -0.57432097 -0.27958491 -0.57786351 0.2209025 -0.25936836 0.61291236 0.25261363 0.57925504
+		 0.57075328 0.30277887 0.57734954 -0.21975294 0.27133316 -0.54056913 -0.19341515 -0.54607081
+		 -0.53138429 -0.28681722 -0.56210971 0.17328125 -0.26372951 0.57066023 0.20746347
+		 0.56267536 0.5276553 0.31052491 0.56123608 -0.17331722 0.27545339 -0.49251682 -0.14349853
+		 -0.52619606 -0.4828926 -0.29300091 -0.54281008 0.12168527 -0.26704517 0.52272981
+		 0.15830821 0.54249328 0.47902521 0.31722334 0.54154974 -0.12289321;
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "1698F531-4503-58D6-3403-299C75991C8F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 160 "e[382]" "e[384]" "e[386]" "e[389]" "e[392]" "e[394]" "e[396]" "e[399]" "e[402]" "e[404]" "e[406]" "e[409]" "e[412]" "e[414]" "e[416]" "e[419]" "e[422]" "e[424]" "e[426]" "e[429]" "e[432]" "e[434]" "e[436]" "e[439]" "e[442]" "e[444]" "e[446]" "e[449]" "e[452]" "e[454]" "e[456]" "e[459]" "e[462]" "e[464]" "e[466]" "e[469]" "e[472]" "e[474]" "e[476]" "e[479]" "e[482]" "e[484]" "e[486]" "e[489]" "e[492]" "e[494]" "e[496]" "e[499]" "e[502]" "e[504]" "e[506]" "e[509]" "e[512]" "e[514]" "e[516]" "e[519]" "e[522]" "e[524]" "e[526]" "e[529]" "e[532]" "e[534]" "e[536]" "e[539]" "e[542]" "e[544]" "e[546]" "e[549]" "e[552]" "e[554]" "e[556]" "e[559]" "e[562]" "e[564]" "e[566]" "e[569]" "e[572]" "e[574]" "e[576]" "e[579]" "e[582]" "e[584]" "e[586]" "e[589]" "e[592]" "e[594]" "e[596]" "e[599]" "e[602]" "e[604]" "e[606]" "e[609]" "e[612]" "e[614]" "e[616]" "e[619]" "e[622]" "e[624]" "e[626]" "e[629]" "e[632]" "e[634]" "e[636]" "e[639]" "e[642]" "e[644]" "e[646]" "e[649]" "e[652]" "e[654]" "e[656]" "e[659]" "e[662]" "e[664]" "e[666]" "e[669]" "e[672]" "e[674]" "e[676]" "e[679]" "e[682]" "e[684]" "e[686]" "e[689]" "e[692]" "e[694]" "e[696]" "e[699]" "e[702]" "e[704]" "e[706]" "e[709]" "e[712]" "e[714]" "e[716]" "e[719]" "e[722]" "e[724]" "e[726]" "e[729]" "e[732]" "e[734]" "e[736]" "e[739]" "e[742]" "e[744]" "e[746]" "e[749]" "e[752]" "e[754]" "e[756]" "e[759]" "e[762]" "e[764]" "e[766]" "e[769]" "e[772]" "e[774]" "e[776]" "e[779]";
+createNode polyTweakUV -n "polyTweakUV2";
+	rename -uid "D29AE595-4C8C-D5D8-3032-ABB1783FE03E";
+	setAttr ".uopa" yes;
+	setAttr -s 548 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.286807 -0.4071165 -0.25952157 -0.40110409
+		 -0.19595295 -0.44804415 -0.24992114 -0.45991874 -0.23852575 -0.39030093 0.10731697
+		 -0.52899575 0.070841476 -0.48431557 0.14386056 -0.48406166 0.082013682 -0.46143401
+		 0.20271133 -0.034649882 0.098782241 0.00026661716 0.18391241 0.0035943445 0.080808461
+		 0.019158754 0.54764068 -0.037724745 0.49224389 -0.053709738 0.51348037 0.011202522
+		 0.47258392 -0.035428453 0.47461674 0.047377676 0.45260903 -0.02541225 0.30031392
+		 0.48389608 0.27478614 0.43004298 0.23901395 0.48213887 0.24722645 0.42371929 0.18450473
+		 0.46964538 0.22587655 0.41270196 -0.11702797 0.53069377 -0.081354335 0.48547637 -0.15349276
+		 0.48522168 -0.092569217 0.46232247 -0.38487881 0.3735888 -0.32879356 0.3596518 -0.38834733
+		 0.3161025 -0.32448375 0.33478808 -0.55420089 -0.0079021938 -0.49696609 0.0049070716
+		 -0.51798832 -0.056688726 -0.47628734 -0.013602905 -0.47710341 -0.093310937 -0.45541045
+		 -0.024142731 -0.31087899 -0.46093458 -0.13483727 -0.49175683 -0.21418488 -0.50924814
+		 0.15951775 -0.54848862 0.21323411 -0.48270079 0.29317531 -0.050542116 0.2654095 0.0058186837
+		 0.58227992 0.0012572296 0.53260016 0.073124528 0.47543523 0.12630494 0.29423115 0.53288126
+		 0.20438366 0.53075999 0.12424408 0.51235628 -0.16837905 0.55044037 -0.22198816 0.48386097
+		 -0.43905187 0.35808551 -0.44429845 0.27380168 -0.58957827 -0.043578435 -0.53688025
+		 -0.11530994 -0.47674182 -0.16913719 -0.30350438 -0.51029229 -0.077319041 -0.53072238
+		 -0.18006846 -0.55347031 0.20767777 -0.56449223 0.27725798 -0.47969437 0.37775686
+		 -0.066867337 0.341575 0.0064023212 0.61209887 0.037734751 0.54857361 0.13071282 0.47446308
+		 0.19953667 0.28731248 0.57630914 0.17136215 0.57426763 0.067593053 0.55033755 -0.21568169
+		 0.56668055 -0.28513682 0.48085558 -0.48791933 0.34214282 -0.49495178 0.23331366 -0.62002957
+		 -0.076701105 -0.55259836 -0.16961502 -0.47464299 -0.23926292 -0.29529703 -0.55413944
+		 -0.024424426 -0.56355625 -0.14800075 -0.59106529 0.25062948 -0.57601047 0.33436647
+		 -0.47453231 0.45468572 -0.083738476 0.41084179 0.0048358943 0.63578987 0.071014047
+		 0.56043941 0.18272819 0.47116992 0.26543155 0.27931592 0.61266303 0.14037515 0.61113727
+		 0.015580343 0.58220828 -0.25776684 0.57841116 -0.34137306 0.47569633 -0.5299542 0.3256458
+		 -0.53874069 0.19514821 -0.64420849 -0.10657789 -0.56416845 -0.2183644 -0.47028741
+		 -0.30204469 -0.28602228 -0.59097159 0.022951344 -0.58903563 -0.11836767 -0.6206708
+		 0.28733397 -0.58217651 0.38316655 -0.46675315 0.52236915 -0.10123979 0.47181341 0.00065619126
+		 0.65223277 0.10045597 0.56733495 0.22805779 0.46508482 0.32254878 0.27006206 0.64062452
+		 0.11180739 0.64000273 -0.030897388 0.60674691 -0.29359555 0.58476025 -0.38930383
+		 0.46792066 -0.56380981 0.30850673 -0.57426727 0.15974917 -0.66096354 -0.13257547
+		 -0.57071674 -0.26044565 -0.46320996 -0.35603935 -0.2755096 -0.61948079 0.064055145
+		 -0.60612226 -0.091503426 -0.64111853 0.31690469 -0.58227092 0.42247096 -0.45595652
+		 0.57943469 -0.11942618 0.52329874 -0.0065381099 0.6605131 0.12549634 0.5685218 0.26574591
+		 0.4558067 0.36967042 0.25943074 0.65909976 0.085991576 0.65969276 -0.071084708 0.62291646
+		 -0.32228205 0.58500397 -0.42774105 0.45712835 -0.58834797 0.29066908 -0.60033607
+		 0.12749074 -0.66935468 -0.1541432 -0.5714972 -0.29490143 -0.45301369 -0.40002763
+		 -0.26364779 -0.63857889 0.098286584 -0.61398447 -0.067679867 -0.65146601 0.33862856
+		 -0.57573771 0.45132589 -0.44181582 0.62476552 -0.13832225 0.56433994 -0.017074946
+		 0.65993637 0.14566688 0.56340486 0.29501992 0.4430131 0.40582401 0.24735418 0.66724068
+		 0.063198343 0.66926312 -0.10438105 0.62988597 -0.34311405 0.57858217 -0.45573029
+		 0.44299269 -0.6026656 0.27210546 -0.61598402 0.098669276 -0.66866875 -0.1708286 -0.56590807
+		 -0.32095832 -0.43937719 -0.43303537 -0.25037849 -0.6474219 0.12521048 -0.6120159
+		 -0.047095895 -0.65102363 0.35198402 -0.56219423 0.46903408 -0.42408693 0.65752977
+		 -0.15792648 0.5942378 -0.031199265 0.65004039 0.16061424 0.55154783 0.31531352 0.42646858
+		 0.43030211 0.23381257 0.66446429 0.043626174 0.6680218 -0.13035078 0.62704879 -0.35557249
+		 0.56510878 -0.47257441 0.42526913 -0.60611653 0.25281501 -0.62050414 0.073497608
+		 -0.65843105 -0.18229578 -0.55350924 -0.33805054 -0.42206639 -0.45435405 -0.23568945
+		 -0.64542788 0.14456534 -0.59984893 -0.029870152 -0.63937116 0.35665664 -0.54143673
+		 0.4751721 -0.40261602 0.67720157 -0.17821442 0.61256689 -0.049065288 0.63060254 0.17011045
+		 0.53268462 0.326285 0.40602908 0.44267756 0.21882592 0.65046549 0.027393207 0.65554768
+		 -0.14873226 0.6140368 -0.35934463 0.54437959 -0.47784838 0.40380335 -0.59832478 0.23282181
+		 -0.61346316 0.052098822 -0.63841307 -0.18833594 -0.53403091 -0.34583437 -0.4009369
+		 -0.46355665 -0.21961038 -0.63228995 0.15627055 -0.5773614 -0.016036151 -0.61636925
+		 0.35254356 -0.51344419 0.4696008 -0.37733996 0.68357444 -0.19913991 0.61918676 -0.070735931
+		 0.60164273 0.17406462 0.50672472 0.32782549 0.38164553 0.44281402 0.20245318 0.62522358
+		 0.014532203 0.63170093 -0.15944448 0.59072793 -0.35433063 0.51637173 -0.47141358
+		 0.37853301 -0.57919461 0.21216913 -0.59471345 0.034504436 -0.60863262 -0.1888793
+		 -0.50738078 -0.34420252 -0.37593818 -0.46050602 -0.20220576 -0.60798353 0.16042866
+		 -0.54468185 -0.0055378126 -0.58216333 0.33976167 -0.47837466 0.45247033 -0.34829149
+		 0.6767686 -0.22064193 0.61424571 -0.096179485 0.56341922 0.17252432 0.47375444 0.32006606
+		 0.35336289 0.43087041 0.18478416 0.58899808 0.0049883034 0.59662622 -0.16259111 0.55724919
+		 -0.34064904 0.48124379 -0.45341867 0.34948999 -0.54891044 0.19091897 -0.56439459
+		 0.020652246 -0.56935292 -0.18399183 -0.47364441 -0.33328384 -0.34711361 -0.44536084
+		 -0.18357264 -0.57276344 0.15732582 -0.50218356 0.0017671841 -0.53717977 0.31863907
+		 -0.43655974 0.42421415 -0.31559414 0.65722883 -0.24264479 0.59817594 -0.12527314
+		 0.51642001 0.16567735 0.43403426 0.30337366 0.32131931 0.40729827 0.16594072 0.54232275;
+	setAttr ".uvtk[250:499]" -0.0013816431 0.55074948 -0.15845801 0.51397324 -0.31863144
+		 0.43932819 -0.42429706 0.31679749 -0.50793135 0.16914569 -0.52293158 0.010387417
+		 -0.52107179 -0.17387901 -0.43308175 -0.31344533 -0.31459808 -0.41857201 -0.16383581
+		 -0.52715695 0.14742573 -0.45047694 0.0061069038 -0.48211214 0.28971034 -0.388493
+		 0.38554195 -0.27946129 0.62571591 -0.26506427 0.57168454 -0.15780395 0.46134731 0.15384151
+		 0.38799188 0.27834156 0.28574184 0.37283248 0.14606826 0.48598695 -0.0048048645 0.49476528
+		 -0.14750965 0.46150953 -0.2888141 0.39112097 -0.38475761 0.28066891 -0.45697638 0.14693438
+		 -0.47102365 0.0034654737 -0.46450579 -0.15887485 -0.38612092 -0.28527981 -0.27861416
+		 -0.38087356 -0.14314468 -0.47194499 0.13136196 -0.39039731 0.0077859685 -0.41790646
+		 0.25369972 -0.33481443 0.33741945 -0.2401904 0.58329123 -0.2878111 0.53573388 -0.19347551
+		 0.39909467 0.13745828 0.33621028 0.24577381 0.246941 0.32847738 0.12533839 0.42101145
+		 -0.0055856779 0.42961913 -0.13038069 0.40069014 -0.25192338 0.33726639 -0.33576575
+		 0.24140154 -0.39700532 0.12437545 -0.40962785 -0.00044137239 -0.40056956 -0.13943289
+		 -0.33334717 -0.24958946 -0.23946621 -0.33326972 -0.12167047 -0.40813854 0.10992604
+		 -0.32298523 0.0071765129 -0.34573299 0.21150263 -0.27629346 0.28104645 -0.1981561
+		 0.53129321 -0.31079304 0.49151894 -0.23191398 0.33071885 0.11707316 0.27941337 0.20666148
+		 0.20530285 0.27548528 0.10394351 0.34861374 -0.0040943846 0.35648245 -0.10786392
+		 0.33255231 -0.20885561 0.27853692 -0.27852067 0.19936998 -0.32919121 0.10156301 -0.33993536
+		 -0.0017351452 -0.33034575 -0.11610635 -0.27548736 -0.20736389 -0.1975321 -0.27701205
+		 -0.099603266 -0.33694506 0.084048644 -0.24946284 0.0047007445 -0.26695412 0.1641594
+		 -0.21380274 0.21782447 -0.15380432 0.47130957 -0.3339223 0.44043824 -0.27267531 0.25740138
+		 0.093317449 0.21844728 0.16214903 0.16128244 0.21532936 0.082094759 0.2701655 -0.00075190514
+		 0.27671951 -0.080891617 0.25831568 -0.16065164 0.21581174 -0.21442322 0.15501939
+		 -0.25488603 0.078587458 -0.26334214 -0.00087795593 -0.25504902 -0.089527622 -0.21339498
+		 -0.15974568 -0.15325643 -0.21357314 -0.077148363 -0.25972408 0.05477839 -0.17121018
+		 0.00081014074 -0.1830851 0.1128301 -0.14829214 0.1493199 -0.10764422 0.40514204 -0.35712054
+		 0.38405743 -0.31525031 0.18039919 0.066885889 0.15425958 0.11349419 0.11539569 0.14966945
+		 0.060013622 0.18713768 0.0039936453 0.19184856 -0.050515622 0.17935495 -0.10847135
+		 0.15004645 -0.14504074 0.10885949 -0.17558439 0.055529874 -0.18141554 0.0016198978
+		 -0.17597432 -0.060383789 -0.14802729 -0.10799007 -0.10714209 -0.14461233 -0.054517806
+		 -0.17793511 0.023246398 -0.089734569 -0.0040393537 -0.095746771 0.058770284 -0.080755308
+		 0.07722427 -0.060239684 0.33476487 -0.38033095 0.32407269 -0.35907328 0.10098284
+		 0.03852991 0.087874219 0.062022004 0.068214238 0.080303267 0.037906513 0.10103779
+		 0.0096901152 0.10349607 -0.017869294 0.097172394 -0.05356741 0.082242057 -0.072064109
+		 0.061454073 -0.092882887 0.032451522 -0.095854387 0.0052218959 -0.094435632 -0.029404212
+		 -0.080424875 -0.053419977 -0.059746221 -0.071929947 -0.031901427 -0.093074039 -0.32431391
+		 -0.35254839 -0.011686095 0.0026004761 -0.034429207 -0.08312805 -0.008451513 0.0093772337
+		 0.0027306229 0.013413165 0.015887586 0.013364334 0.020367408 0.0090989694 0.26226601
+		 -0.40353292 0.0033119433 -0.012200044 -0.0093922997 -0.0066343378 -0.090293333 -0.021551196
+		 -0.083232358 0.036018163 -0.042076319 0.082692996 0.043933958 0.091589183 0.30730876
+		 -0.34211725 0.088434041 -0.035075773 0.047286645 -0.075633094 -0.0040243128 -0.48401439
+		 0.011810984 -0.0036143623 0.4699454 -0.12017356 0.31117454 0.37618291 -0.0073710149
+		 0.48517632 -0.26741856 0.40383732 -0.47488067 0.068044782 -0.31771356 -0.40774208
+		 -0.5154171 0.029581085 -0.32707295 0.38879067 -0.062904388 0.50854647 0.30585918
+		 0.43104637 0.5096578 -0.078471258 0.10826451 -0.019055072 0.052349828 -0.50711358
+		 -0.057365999 -0.16677912 -0.17049988 -0.051192135 -0.16712143 0.058713894 -0.098251909
+		 0.15097775 0.067671895 0.1719764 0.35087427 -0.28167987 0.17147927 -0.058036603 0.10217249
+		 -0.14357467 -0.080631673 -0.24619597 -0.24745677 -0.078295276 -0.24689974 0.081574023
+		 -0.15081213 0.21708591 0.091675818 0.24808802 0.3915402 -0.22318062 0.25040826 -0.081150368
+		 0.15344156 -0.20931022 -0.10430147 -0.31929141 -0.31960768 -0.1016738 -0.32061562
+		 0.10465506 -0.19801463 0.27987641 0.11597784 0.31782895 0.427977 -0.16753426 0.32326663
+		 -0.10446785 0.19935514 -0.27168155 -0.12838909 -0.38414332 -0.38549984 -0.1202444
+		 -0.38645756 0.12799178 -0.23828457 0.33825123 0.14055373 0.37927824 0.4589754 -0.11559549
+		 0.38824227 -0.12801747 0.2383468 -0.32957768 -0.15285785 -0.43905142 -0.44382301
+		 -0.13305606 -0.44280761 0.15159352 -0.27025411 0.3911953 0.16533421 0.4307422 0.48347053
+		 -0.068143487 0.44371632 -0.15180193 0.26905775 -0.38197464 -0.17763211 -0.48257452
+		 -0.49344516 -0.13931467 -0.48828149 0.1754459 -0.2927883 0.43781114 0.19021945 0.47079295
+		 0.50056529 -0.025861088 0.4883059 -0.17580386 0.29036146 -0.42796713 -0.20260857
+		 -0.51356256 -0.53344297 -0.13839905 -0.52176476 0.19951598 -0.30500278 0.47734368
+		 0.21508668 0.49829549 0.50955033 0.010683006 0.52089792 -0.19998531 0.3013829 -0.46679744
+		 -0.22766383 -0.53117746 -0.56312597 -0.12987499 -0.54244018 0.22375502 -0.3062785
+		 0.50920165 0.2398008 0.51242983 0.50991976 0.041053504 0.54067594 -0.22429456 0.3015115
+		 -0.49787337 -0.25266233 -0.5349108 -0.58205354 -0.11349933 -0.54980427 0.24810296
+		 -0.29627249 0.53297412 0.26421854 0.51270735 0.50138408 0.064959496 0.54713953 -0.24867052
+		 0.29041278 -0.52078545 -0.27746257 -0.52459371 -0.59004784 -0.089229032 -0.54368222
+		 0.27249229 -0.27491924 0.54844213 0.28819844 0.49897951 0.48387513 0.082266927 0.54011637
+		 -0.27304456 0.26802772 -0.53531784 -0.30192435 -0.50039923 -0.58719808 -0.057212621
+		 -0.52422988 0.29685456 -0.24243279 0.55558622 0.31160375 0.47143799 0.45754716 0.093002662
+		 0.51976478 -0.29734844 0.23457699 -0.54145581;
+	setAttr ".uvtk[500:547]" -0.32591495 -0.46283883 -0.57386172 -0.017791405 -0.49193189
+		 0.32112181 -0.19929825 0.55458844 0.33431229 0.43061206 0.42277136 0.097357452 0.48657164
+		 -0.32151499 0.19054948 -0.53938919 -0.34931535 -0.41275215 -0.5506565 0.028516181
+		 -0.44758904 0.34523273 -0.14626038 0.54583305 0.35621968 0.37735665 0.38012388 0.095681056
+		 0.44134012 -0.34548563 0.136693 -0.52951038 -0.37202811 -0.35128814 -0.51844877 0.081025466
+		 -0.3923009 0.36913681 -0.084307015 0.52990282 0.37724879 0.31283414 0.33037004 0.088476852
+		 0.38517186 -0.36921352 0.073995285 -0.51241088 -0.39398506 -0.27988636 -0.47833568
+		 0.13890608 -0.32744193 0.39279842 -0.014645816 0.50757205 0.39735809 0.23849051 0.27444062
+		 0.076391444 0.31944185 -0.3926667 0.0036612628 -0.4888759 -0.41516125 -0.20024659
+		 -0.43162239 0.20120274 -0.25462717 0.41620272 0.061324194 0.47980154 0.41655454 0.15602757
+		 0.2134058 0.060199488 0.2457667 -0.4158361 -0.072914511 -0.45987833 -0.43559256 -0.11429764
+		 -0.37979451 0.26686662 -0.17567755 0.4393611 0.14204811 0.44773602 0.43491337 0.067365825
+		 0.14844345 0.040790871 0.16596581 -0.43874019 -0.15418848 -0.42657414;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -14918,170 +15090,173 @@ connectAttr "BaseRigRN.phl[68]" "bindPose1.m[15]";
 connectAttr "BaseRigRN.phl[69]" "skinCluster1.lw[15]";
 connectAttr "BaseRigRN.phl[70]" "skinCluster1.ma[15]";
 connectAttr "BaseRigRN.phl[71]" "skinCluster1.ifcl[15]";
-connectAttr "BaseRigRN.phl[72]" "lambert7SG.dsm" -na;
-connectAttr "BaseRigRN.phl[73]" "bindPose1.m[16]";
-connectAttr "BaseRigRN.phl[74]" "skinCluster1.lw[16]";
-connectAttr "BaseRigRN.phl[75]" "skinCluster1.ma[16]";
-connectAttr "BaseRigRN.phl[76]" "skinCluster1.ifcl[16]";
-connectAttr "BaseRigRN.phl[77]" "bindPose1.m[17]";
-connectAttr "BaseRigRN.phl[78]" "skinCluster1.lw[17]";
-connectAttr "BaseRigRN.phl[79]" "skinCluster1.ma[17]";
-connectAttr "BaseRigRN.phl[80]" "skinCluster1.ifcl[17]";
-connectAttr "BaseRigRN.phl[81]" "skinCluster1.lw[18]";
-connectAttr "BaseRigRN.phl[82]" "bindPose1.m[18]";
-connectAttr "BaseRigRN.phl[83]" "skinCluster1.ma[18]";
-connectAttr "BaseRigRN.phl[84]" "skinCluster1.ifcl[18]";
-connectAttr "BaseRigRN.phl[85]" "skinCluster1.lw[19]";
-connectAttr "BaseRigRN.phl[86]" "bindPose1.m[19]";
-connectAttr "BaseRigRN.phl[87]" "skinCluster1.ma[19]";
-connectAttr "BaseRigRN.phl[88]" "skinCluster1.ifcl[19]";
-connectAttr "BaseRigRN.phl[89]" "skinCluster1.lw[20]";
-connectAttr "BaseRigRN.phl[90]" "bindPose1.m[20]";
-connectAttr "BaseRigRN.phl[91]" "skinCluster1.ma[20]";
-connectAttr "BaseRigRN.phl[92]" "skinCluster1.ifcl[20]";
-connectAttr "BaseRigRN.phl[93]" "skinCluster1.lw[21]";
-connectAttr "BaseRigRN.phl[94]" "bindPose1.m[21]";
-connectAttr "BaseRigRN.phl[95]" "skinCluster1.ma[21]";
-connectAttr "BaseRigRN.phl[96]" "skinCluster1.ifcl[21]";
-connectAttr "BaseRigRN.phl[97]" "bindPose1.m[22]";
-connectAttr "BaseRigRN.phl[98]" "skinCluster1.lw[22]";
-connectAttr "BaseRigRN.phl[99]" "skinCluster1.ma[22]";
-connectAttr "BaseRigRN.phl[100]" "skinCluster1.ifcl[22]";
-connectAttr "BaseRigRN.phl[101]" "skinCluster1.lw[23]";
-connectAttr "BaseRigRN.phl[102]" "bindPose1.m[23]";
-connectAttr "BaseRigRN.phl[103]" "skinCluster1.ma[23]";
-connectAttr "BaseRigRN.phl[104]" "skinCluster1.ifcl[23]";
-connectAttr "BaseRigRN.phl[105]" "skinCluster1.lw[24]";
-connectAttr "BaseRigRN.phl[106]" "bindPose1.m[24]";
-connectAttr "BaseRigRN.phl[107]" "skinCluster1.ma[24]";
-connectAttr "BaseRigRN.phl[108]" "skinCluster1.ifcl[24]";
-connectAttr "BaseRigRN.phl[109]" "skinCluster1.lw[25]";
-connectAttr "BaseRigRN.phl[110]" "bindPose1.m[25]";
-connectAttr "BaseRigRN.phl[111]" "skinCluster1.ma[25]";
-connectAttr "BaseRigRN.phl[112]" "skinCluster1.ifcl[25]";
-connectAttr "BaseRigRN.phl[113]" "skinCluster1.lw[26]";
-connectAttr "BaseRigRN.phl[114]" "bindPose1.m[26]";
-connectAttr "BaseRigRN.phl[115]" "skinCluster1.ma[26]";
-connectAttr "BaseRigRN.phl[116]" "skinCluster1.ifcl[26]";
-connectAttr "Transform_Ctrl_LArmIKFKSwitch.o" "BaseRigRN.phl[117]";
-connectAttr "Transform_Ctrl_RArmIKFKSwitch.o" "BaseRigRN.phl[118]";
-connectAttr "Transform_Ctrl_LLegIKFKSwich.o" "BaseRigRN.phl[119]";
-connectAttr "Transform_Ctrl_RLegIKFKSwitch.o" "BaseRigRN.phl[120]";
-connectAttr "Root_J_CTRL_scaleX.o" "BaseRigRN.phl[121]";
-connectAttr "Root_J_CTRL_scaleY.o" "BaseRigRN.phl[122]";
-connectAttr "Root_J_CTRL_scaleZ.o" "BaseRigRN.phl[123]";
-connectAttr "Root_J_CTRL_visibility.o" "BaseRigRN.phl[124]";
-connectAttr "Ankle_Ctrl_L_IK_translateX.o" "BaseRigRN.phl[125]";
-connectAttr "Ankle_Ctrl_L_IK_translateY.o" "BaseRigRN.phl[126]";
-connectAttr "Ankle_Ctrl_L_IK_translateZ.o" "BaseRigRN.phl[127]";
-connectAttr "Ankle_Ctrl_L_IK_visibility.o" "BaseRigRN.phl[128]";
-connectAttr "Ankle_Ctrl_L_IK_rotateX.o" "BaseRigRN.phl[129]";
-connectAttr "Ankle_Ctrl_L_IK_rotateY.o" "BaseRigRN.phl[130]";
-connectAttr "Ankle_Ctrl_L_IK_rotateZ.o" "BaseRigRN.phl[131]";
-connectAttr "Ankle_Ctrl_L_IK_scaleX.o" "BaseRigRN.phl[132]";
-connectAttr "Ankle_Ctrl_L_IK_scaleY.o" "BaseRigRN.phl[133]";
-connectAttr "Ankle_Ctrl_L_IK_scaleZ.o" "BaseRigRN.phl[134]";
-connectAttr "Ankle_Ctrl_R_IK_translateX.o" "BaseRigRN.phl[135]";
-connectAttr "Ankle_Ctrl_R_IK_translateY.o" "BaseRigRN.phl[136]";
-connectAttr "Ankle_Ctrl_R_IK_translateZ.o" "BaseRigRN.phl[137]";
-connectAttr "Ankle_Ctrl_R_IK_visibility.o" "BaseRigRN.phl[138]";
-connectAttr "Ankle_Ctrl_R_IK_rotateX.o" "BaseRigRN.phl[139]";
-connectAttr "Ankle_Ctrl_R_IK_rotateY.o" "BaseRigRN.phl[140]";
-connectAttr "Ankle_Ctrl_R_IK_rotateZ.o" "BaseRigRN.phl[141]";
-connectAttr "Ankle_Ctrl_R_IK_scaleX.o" "BaseRigRN.phl[142]";
-connectAttr "Ankle_Ctrl_R_IK_scaleY.o" "BaseRigRN.phl[143]";
-connectAttr "Ankle_Ctrl_R_IK_scaleZ.o" "BaseRigRN.phl[144]";
-connectAttr "BaseRigRN.phl[145]" "polyMapCut1.ip";
-connectAttr "BaseCharacterSet_Root_J_CTRL_translateZ.o" "BaseRigRN.phl[146]";
-connectAttr "BaseCharacterSet_Root_J_CTRL_translateY.o" "BaseRigRN.phl[147]";
-connectAttr "BaseCharacterSet_Root_J_CTRL_translateX.o" "BaseRigRN.phl[148]";
-connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[149]";
-connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateY.o" "BaseRigRN.phl[150]";
-connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateX.o" "BaseRigRN.phl[151]";
-connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[152]";
-connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateY.o" "BaseRigRN.phl[153]";
-connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateX.o" "BaseRigRN.phl[154]";
-connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[155]";
-connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateY.o" "BaseRigRN.phl[156]";
-connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateX.o" "BaseRigRN.phl[157]";
-connectAttr "BaseCharacterSet_Root_J_CTRL_rotateZ.o" "BaseRigRN.phl[158]";
-connectAttr "BaseCharacterSet_Root_J_CTRL_rotateY.o" "BaseRigRN.phl[159]";
-connectAttr "BaseCharacterSet_Root_J_CTRL_rotateX.o" "BaseRigRN.phl[160]";
-connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateZ.o" "BaseRigRN.phl[161]";
-connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateY.o" "BaseRigRN.phl[162]";
-connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateX.o" "BaseRigRN.phl[163]";
-connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[164]";
-connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateY.o" "BaseRigRN.phl[165]";
-connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateX.o" "BaseRigRN.phl[166]";
-connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[167]";
-connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateY.o" "BaseRigRN.phl[168]";
-connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateX.o" "BaseRigRN.phl[169]";
-connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[170]";
-connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateY.o" "BaseRigRN.phl[171]";
-connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateX.o" "BaseRigRN.phl[172]";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateZ.o" "BaseRigRN.phl[173]";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateY.o" "BaseRigRN.phl[174]";
-connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateX.o" "BaseRigRN.phl[175]";
-connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[176]";
-connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateY.o" "BaseRigRN.phl[177]";
-connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateX.o" "BaseRigRN.phl[178]";
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[179]";
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateY.o" "BaseRigRN.phl[180]";
-connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateX.o" "BaseRigRN.phl[181]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateZ.o" "BaseRigRN.phl[182]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateY.o" "BaseRigRN.phl[183]";
-connectAttr "BaseCharacterSet_head_J_CTRL_rotateX.o" "BaseRigRN.phl[184]";
-connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[185]";
-connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateY.o" "BaseRigRN.phl[186]";
-connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateX.o" "BaseRigRN.phl[187]";
-connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[188]";
-connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateY.o" "BaseRigRN.phl[189]";
-connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateX.o" "BaseRigRN.phl[190]";
-connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[191]";
-connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateY.o" "BaseRigRN.phl[192]";
-connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateX.o" "BaseRigRN.phl[193]";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[194]";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateY.o" "BaseRigRN.phl[195]";
-connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateX.o" "BaseRigRN.phl[196]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[197]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateY.o" "BaseRigRN.phl[198]";
-connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateX.o" "BaseRigRN.phl[199]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[200]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateY.o" "BaseRigRN.phl[201]";
-connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateX.o" "BaseRigRN.phl[202]";
-connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[203]";
-connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateY.o" "BaseRigRN.phl[204]";
-connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateX.o" "BaseRigRN.phl[205]";
-connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateZ.o" "BaseRigRN.phl[206]"
+connectAttr "polyTweakUV2.out" "BaseRigRN.phl[72]";
+connectAttr "BaseRigRN.phl[73]" "lambert7SG.dsm" -na;
+connectAttr "polyTweakUV2.uvtk[0]" "BaseRigRN.phl[74]";
+connectAttr "BaseRigRN.phl[75]" "bindPose1.m[16]";
+connectAttr "BaseRigRN.phl[76]" "skinCluster1.lw[16]";
+connectAttr "BaseRigRN.phl[77]" "skinCluster1.ma[16]";
+connectAttr "BaseRigRN.phl[78]" "skinCluster1.ifcl[16]";
+connectAttr "BaseRigRN.phl[79]" "bindPose1.m[17]";
+connectAttr "BaseRigRN.phl[80]" "skinCluster1.lw[17]";
+connectAttr "BaseRigRN.phl[81]" "skinCluster1.ma[17]";
+connectAttr "BaseRigRN.phl[82]" "skinCluster1.ifcl[17]";
+connectAttr "BaseRigRN.phl[83]" "skinCluster1.lw[18]";
+connectAttr "BaseRigRN.phl[84]" "bindPose1.m[18]";
+connectAttr "BaseRigRN.phl[85]" "skinCluster1.ma[18]";
+connectAttr "BaseRigRN.phl[86]" "skinCluster1.ifcl[18]";
+connectAttr "BaseRigRN.phl[87]" "skinCluster1.lw[19]";
+connectAttr "BaseRigRN.phl[88]" "bindPose1.m[19]";
+connectAttr "BaseRigRN.phl[89]" "skinCluster1.ma[19]";
+connectAttr "BaseRigRN.phl[90]" "skinCluster1.ifcl[19]";
+connectAttr "BaseRigRN.phl[91]" "skinCluster1.lw[20]";
+connectAttr "BaseRigRN.phl[92]" "bindPose1.m[20]";
+connectAttr "BaseRigRN.phl[93]" "skinCluster1.ma[20]";
+connectAttr "BaseRigRN.phl[94]" "skinCluster1.ifcl[20]";
+connectAttr "BaseRigRN.phl[95]" "skinCluster1.lw[21]";
+connectAttr "BaseRigRN.phl[96]" "bindPose1.m[21]";
+connectAttr "BaseRigRN.phl[97]" "skinCluster1.ma[21]";
+connectAttr "BaseRigRN.phl[98]" "skinCluster1.ifcl[21]";
+connectAttr "BaseRigRN.phl[99]" "bindPose1.m[22]";
+connectAttr "BaseRigRN.phl[100]" "skinCluster1.lw[22]";
+connectAttr "BaseRigRN.phl[101]" "skinCluster1.ma[22]";
+connectAttr "BaseRigRN.phl[102]" "skinCluster1.ifcl[22]";
+connectAttr "BaseRigRN.phl[103]" "skinCluster1.lw[23]";
+connectAttr "BaseRigRN.phl[104]" "bindPose1.m[23]";
+connectAttr "BaseRigRN.phl[105]" "skinCluster1.ma[23]";
+connectAttr "BaseRigRN.phl[106]" "skinCluster1.ifcl[23]";
+connectAttr "BaseRigRN.phl[107]" "skinCluster1.lw[24]";
+connectAttr "BaseRigRN.phl[108]" "bindPose1.m[24]";
+connectAttr "BaseRigRN.phl[109]" "skinCluster1.ma[24]";
+connectAttr "BaseRigRN.phl[110]" "skinCluster1.ifcl[24]";
+connectAttr "BaseRigRN.phl[111]" "skinCluster1.lw[25]";
+connectAttr "BaseRigRN.phl[112]" "bindPose1.m[25]";
+connectAttr "BaseRigRN.phl[113]" "skinCluster1.ma[25]";
+connectAttr "BaseRigRN.phl[114]" "skinCluster1.ifcl[25]";
+connectAttr "BaseRigRN.phl[115]" "skinCluster1.lw[26]";
+connectAttr "BaseRigRN.phl[116]" "bindPose1.m[26]";
+connectAttr "BaseRigRN.phl[117]" "skinCluster1.ma[26]";
+connectAttr "BaseRigRN.phl[118]" "skinCluster1.ifcl[26]";
+connectAttr "Transform_Ctrl_LArmIKFKSwitch.o" "BaseRigRN.phl[119]";
+connectAttr "Transform_Ctrl_RArmIKFKSwitch.o" "BaseRigRN.phl[120]";
+connectAttr "Transform_Ctrl_LLegIKFKSwich.o" "BaseRigRN.phl[121]";
+connectAttr "Transform_Ctrl_RLegIKFKSwitch.o" "BaseRigRN.phl[122]";
+connectAttr "Root_J_CTRL_scaleX.o" "BaseRigRN.phl[123]";
+connectAttr "Root_J_CTRL_scaleY.o" "BaseRigRN.phl[124]";
+connectAttr "Root_J_CTRL_scaleZ.o" "BaseRigRN.phl[125]";
+connectAttr "Root_J_CTRL_visibility.o" "BaseRigRN.phl[126]";
+connectAttr "Ankle_Ctrl_L_IK_translateX.o" "BaseRigRN.phl[127]";
+connectAttr "Ankle_Ctrl_L_IK_translateY.o" "BaseRigRN.phl[128]";
+connectAttr "Ankle_Ctrl_L_IK_translateZ.o" "BaseRigRN.phl[129]";
+connectAttr "Ankle_Ctrl_L_IK_visibility.o" "BaseRigRN.phl[130]";
+connectAttr "Ankle_Ctrl_L_IK_rotateX.o" "BaseRigRN.phl[131]";
+connectAttr "Ankle_Ctrl_L_IK_rotateY.o" "BaseRigRN.phl[132]";
+connectAttr "Ankle_Ctrl_L_IK_rotateZ.o" "BaseRigRN.phl[133]";
+connectAttr "Ankle_Ctrl_L_IK_scaleX.o" "BaseRigRN.phl[134]";
+connectAttr "Ankle_Ctrl_L_IK_scaleY.o" "BaseRigRN.phl[135]";
+connectAttr "Ankle_Ctrl_L_IK_scaleZ.o" "BaseRigRN.phl[136]";
+connectAttr "Ankle_Ctrl_R_IK_translateX.o" "BaseRigRN.phl[137]";
+connectAttr "Ankle_Ctrl_R_IK_translateY.o" "BaseRigRN.phl[138]";
+connectAttr "Ankle_Ctrl_R_IK_translateZ.o" "BaseRigRN.phl[139]";
+connectAttr "Ankle_Ctrl_R_IK_visibility.o" "BaseRigRN.phl[140]";
+connectAttr "Ankle_Ctrl_R_IK_rotateX.o" "BaseRigRN.phl[141]";
+connectAttr "Ankle_Ctrl_R_IK_rotateY.o" "BaseRigRN.phl[142]";
+connectAttr "Ankle_Ctrl_R_IK_rotateZ.o" "BaseRigRN.phl[143]";
+connectAttr "Ankle_Ctrl_R_IK_scaleX.o" "BaseRigRN.phl[144]";
+connectAttr "Ankle_Ctrl_R_IK_scaleY.o" "BaseRigRN.phl[145]";
+connectAttr "Ankle_Ctrl_R_IK_scaleZ.o" "BaseRigRN.phl[146]";
+connectAttr "BaseRigRN.phl[147]" "polyMapCut1.ip";
+connectAttr "BaseRigRN.phl[148]" "polyMapCut2.ip";
+connectAttr "BaseCharacterSet_Root_J_CTRL_translateZ.o" "BaseRigRN.phl[149]";
+connectAttr "BaseCharacterSet_Root_J_CTRL_translateY.o" "BaseRigRN.phl[150]";
+connectAttr "BaseCharacterSet_Root_J_CTRL_translateX.o" "BaseRigRN.phl[151]";
+connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[152]";
+connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateY.o" "BaseRigRN.phl[153]";
+connectAttr "BaseCharacterSet_Hip_J_R_CTRL_rotateX.o" "BaseRigRN.phl[154]";
+connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[155]";
+connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateY.o" "BaseRigRN.phl[156]";
+connectAttr "BaseCharacterSet_Knee_J_R_CTRL_rotateX.o" "BaseRigRN.phl[157]";
+connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[158]";
+connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateY.o" "BaseRigRN.phl[159]";
+connectAttr "BaseCharacterSet_Ankle_J_R_CTRL_rotateX.o" "BaseRigRN.phl[160]";
+connectAttr "BaseCharacterSet_Root_J_CTRL_rotateZ.o" "BaseRigRN.phl[161]";
+connectAttr "BaseCharacterSet_Root_J_CTRL_rotateY.o" "BaseRigRN.phl[162]";
+connectAttr "BaseCharacterSet_Root_J_CTRL_rotateX.o" "BaseRigRN.phl[163]";
+connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateZ.o" "BaseRigRN.phl[164]";
+connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateY.o" "BaseRigRN.phl[165]";
+connectAttr "BaseCharacterSet_Pelvis_J_CTRL_rotateX.o" "BaseRigRN.phl[166]";
+connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[167]";
+connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateY.o" "BaseRigRN.phl[168]";
+connectAttr "BaseCharacterSet_Hip_J_L_CTRL_rotateX.o" "BaseRigRN.phl[169]";
+connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[170]";
+connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateY.o" "BaseRigRN.phl[171]";
+connectAttr "BaseCharacterSet_Knee_J_L_CTRL_rotateX.o" "BaseRigRN.phl[172]";
+connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[173]";
+connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateY.o" "BaseRigRN.phl[174]";
+connectAttr "BaseCharacterSet_Ankle_J_L_CTRL_rotateX.o" "BaseRigRN.phl[175]";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateZ.o" "BaseRigRN.phl[176]";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateY.o" "BaseRigRN.phl[177]";
+connectAttr "BaseCharacterSet_LowerBack_J_CTRL_rotateX.o" "BaseRigRN.phl[178]";
+connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[179]";
+connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateY.o" "BaseRigRN.phl[180]";
+connectAttr "BaseCharacterSet_MiddleBack_j_CTRL_rotateX.o" "BaseRigRN.phl[181]";
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateZ.o" "BaseRigRN.phl[182]";
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateY.o" "BaseRigRN.phl[183]";
+connectAttr "BaseCharacterSet_UpperBack_j_CTRL_rotateX.o" "BaseRigRN.phl[184]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateZ.o" "BaseRigRN.phl[185]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateY.o" "BaseRigRN.phl[186]";
+connectAttr "BaseCharacterSet_head_J_CTRL_rotateX.o" "BaseRigRN.phl[187]";
+connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[188]";
+connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateY.o" "BaseRigRN.phl[189]";
+connectAttr "BaseCharacterSet_Eye_J_L_CTRL_rotateX.o" "BaseRigRN.phl[190]";
+connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[191]";
+connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateY.o" "BaseRigRN.phl[192]";
+connectAttr "BaseCharacterSet_EyeLid_J_L_CTRL_rotateX.o" "BaseRigRN.phl[193]";
+connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[194]";
+connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateY.o" "BaseRigRN.phl[195]";
+connectAttr "BaseCharacterSet_Eye_J_R_CTRL_rotateX.o" "BaseRigRN.phl[196]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[197]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateY.o" "BaseRigRN.phl[198]";
+connectAttr "BaseCharacterSet_EyeLid_J_R_CTRL_rotateX.o" "BaseRigRN.phl[199]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[200]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateY.o" "BaseRigRN.phl[201]";
+connectAttr "BaseCharacterSet_Elbow_J_L_CTRL_rotateX.o" "BaseRigRN.phl[202]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[203]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateY.o" "BaseRigRN.phl[204]";
+connectAttr "BaseCharacterSet_Wrist_J_L_CTRL_rotateX.o" "BaseRigRN.phl[205]";
+connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[206]";
+connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateY.o" "BaseRigRN.phl[207]";
+connectAttr "BaseCharacterSet_Clavical_J_R_CTRL_rotateX.o" "BaseRigRN.phl[208]";
+connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateZ.o" "BaseRigRN.phl[209]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateY.o" "BaseRigRN.phl[207]"
+connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateY.o" "BaseRigRN.phl[210]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateX.o" "BaseRigRN.phl[208]"
+connectAttr "BaseCharacterSet_Shoulder_J_R2_CTRL_rotateX.o" "BaseRigRN.phl[211]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[209]";
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateY.o" "BaseRigRN.phl[210]";
-connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateX.o" "BaseRigRN.phl[211]";
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[212]";
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateY.o" "BaseRigRN.phl[213]";
-connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateX.o" "BaseRigRN.phl[214]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[215]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateY.o" "BaseRigRN.phl[216]";
-connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateX.o" "BaseRigRN.phl[217]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseRigRN.phl[218]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateY.o" "BaseRigRN.phl[219]";
-connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateX.o" "BaseRigRN.phl[220]";
-connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[221]";
-connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateY.o" "BaseRigRN.phl[222]";
-connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateX.o" "BaseRigRN.phl[223]";
-connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateZ.o" "BaseRigRN.phl[224]"
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[212]";
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateY.o" "BaseRigRN.phl[213]";
+connectAttr "BaseCharacterSet_Shoulder_J_R_CTRL_rotateX.o" "BaseRigRN.phl[214]";
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[215]";
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateY.o" "BaseRigRN.phl[216]";
+connectAttr "BaseCharacterSet_Elbow_J_R_CTRL_rotateX.o" "BaseRigRN.phl[217]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateZ.o" "BaseRigRN.phl[218]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateY.o" "BaseRigRN.phl[219]";
+connectAttr "BaseCharacterSet_Wrist_J_R_CTRL_rotateX.o" "BaseRigRN.phl[220]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateZ.o" "BaseRigRN.phl[221]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateY.o" "BaseRigRN.phl[222]";
+connectAttr "BaseCharacterSet_Jaw_J_CTRL_rotateX.o" "BaseRigRN.phl[223]";
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[224]";
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateY.o" "BaseRigRN.phl[225]";
+connectAttr "BaseCharacterSet_Clavical_J_L_CTRL_rotateX.o" "BaseRigRN.phl[226]";
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateZ.o" "BaseRigRN.phl[227]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateY.o" "BaseRigRN.phl[225]"
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateY.o" "BaseRigRN.phl[228]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateX.o" "BaseRigRN.phl[226]"
+connectAttr "BaseCharacterSet_Shoulder_J_L2_CTRL_rotateX.o" "BaseRigRN.phl[229]"
 		;
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[227]";
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateY.o" "BaseRigRN.phl[228]";
-connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateX.o" "BaseRigRN.phl[229]";
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateZ.o" "BaseRigRN.phl[230]";
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateY.o" "BaseRigRN.phl[231]";
+connectAttr "BaseCharacterSet_Shoulder_J_L_CTRL_rotateX.o" "BaseRigRN.phl[232]";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -15101,17 +15276,6 @@ connectAttr "groupId6.id" "mainBody1Shape.iog.og[5].gid";
 connectAttr "tweakSet1.mwc" "mainBody1Shape.iog.og[5].gco";
 connectAttr "skinCluster1.og[0]" "mainBody1Shape.i";
 connectAttr "tweak1.vl[0].vt[0]" "mainBody1Shape.twl";
-connectAttr "RWingCtrl_translateX.o" "RWingCtrl.tx";
-connectAttr "RWingCtrl_translateY.o" "RWingCtrl.ty";
-connectAttr "RWingCtrl_translateZ.o" "RWingCtrl.tz";
-connectAttr "RWingCtrl_rotateX.o" "RWingCtrl.rx";
-connectAttr "RWingCtrl_rotateY.o" "RWingCtrl.ry";
-connectAttr "RWingCtrl_rotateZ.o" "RWingCtrl.rz";
-connectAttr "RWingCtrl_scaleX.o" "RWingCtrl.sx";
-connectAttr "RWingCtrl_scaleY.o" "RWingCtrl.sy";
-connectAttr "RWingCtrl_scaleZ.o" "RWingCtrl.sz";
-connectAttr "RWingCtrl_visibility.o" "RWingCtrl.v";
-connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
 connectAttr "LWingCtrl_visibility.o" "LWingCtrl.v";
 connectAttr "LWingCtrl_translateX.o" "LWingCtrl.tx";
 connectAttr "LWingCtrl_translateY.o" "LWingCtrl.ty";
@@ -15123,36 +15287,17 @@ connectAttr "LWingCtrl_scaleX.o" "LWingCtrl.sx";
 connectAttr "LWingCtrl_scaleY.o" "LWingCtrl.sy";
 connectAttr "LWingCtrl_scaleZ.o" "LWingCtrl.sz";
 connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
-connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
-connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
-connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
-connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
-connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
-connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
-connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
-connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
-connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
-connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
-connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
-connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
-connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
-connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
-connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
-connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
-connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
-connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
-connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
-		;
-connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
-		;
+connectAttr "RWingCtrl_translateX.o" "RWingCtrl.tx";
+connectAttr "RWingCtrl_translateY.o" "RWingCtrl.ty";
+connectAttr "RWingCtrl_translateZ.o" "RWingCtrl.tz";
+connectAttr "RWingCtrl_rotateX.o" "RWingCtrl.rx";
+connectAttr "RWingCtrl_rotateY.o" "RWingCtrl.ry";
+connectAttr "RWingCtrl_rotateZ.o" "RWingCtrl.rz";
+connectAttr "RWingCtrl_scaleX.o" "RWingCtrl.sx";
+connectAttr "RWingCtrl_scaleY.o" "RWingCtrl.sy";
+connectAttr "RWingCtrl_scaleZ.o" "RWingCtrl.sz";
+connectAttr "RWingCtrl_visibility.o" "RWingCtrl.v";
+connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
 connectAttr "RWingInnerJoint_scaleConstraint1.csx" "|BaseRigRNfosterParent1|RWingInnerJoint.sx"
 		;
 connectAttr "RWingInnerJoint_scaleConstraint1.csy" "|BaseRigRNfosterParent1|RWingInnerJoint.sy"
@@ -15199,6 +15344,36 @@ connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.pim" "RWingInnerJoint_scale
 connectAttr "RWingCtrl.s" "RWingInnerJoint_scaleConstraint1.tg[0].ts";
 connectAttr "RWingCtrl.pm" "RWingInnerJoint_scaleConstraint1.tg[0].tpm";
 connectAttr "RWingInnerJoint_scaleConstraint1.w0" "RWingInnerJoint_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
+connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
+connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
+connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
+connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
+connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
+connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
+connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
+connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
+connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
+connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
+connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
+connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
+connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
+connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
+connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
+connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
+connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
+connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
+		;
+connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -15583,6 +15758,7 @@ connectAttr "leftEye.oc" "lambert8SG.ss";
 connectAttr "lambert8SG.msg" "materialInfo7.sg";
 connectAttr "leftEye.msg" "materialInfo7.m";
 connectAttr "polyMapCut1.out" "polyTweakUV1.ip";
+connectAttr "polyMapCut2.out" "polyTweakUV2.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;

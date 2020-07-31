@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: moth2rigDefeatAnimation2.ma
-//Last modified: Thu, Jul 30, 2020 10:49:00 PM
+//Last modified: Thu, Jul 30, 2020 10:51:28 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
@@ -14,18 +14,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "4A35B1FC-4C71-ECBF-D173-748E0BD9087A";
+fileInfo "UUID" "799F2D69-43F2-15A9-84EE-23B097109F06";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.51022266025562391 3.2406674614689286 3.9193478479364097 ;
-	setAttr ".r" -type "double3" 708.26164670317462 10788.599999996219 0 ;
+	setAttr ".t" -type "double3" -0.49456623927498278 3.1930881323703835 3.1772944319660845 ;
+	setAttr ".r" -type "double3" 719.66164671310241 10794.600000011473 3.1198564644805963e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 4.0718527670181945;
+	setAttr ".coi" 3.4912587520492635;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9453,25 +9453,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "3C13A461-4BC4-3E40-FE8C-43921E4E9A13";
-createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
-	rename -uid "A9713D8D-4975-D17B-8FC1-9AB3D889E836";
-	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
-	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
-	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
-createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
-	rename -uid "699BAE87-4F3C-346D-C8DB-55B3D50CEE86";
-createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
-	rename -uid "CC0B4764-420D-B8E3-B48B-76B28FB1289B";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" 0.86850611262776434 -0.036466827865662924 
-		0.046510701026848622 0.86850611262776312 -0.036466827865662924 0.04651070102685062 
-		0.86850611262776345 -0.036466827865662924 0.046510701026848622 0.86850611262776278 
-		-0.036466827865662924 0.046510701026849101 0.86850611262776345 -0.036466827865662924 
-		0.046510701026848622 0.86850611262776323 -0.036466827865662924 0.04651070102685062 
-		0.86850611262776434 -0.036466827865662924 0.046510701026848622 0.86850611262776445 
-		-0.036466827865662924 0.046510701026849101 0 0 0 0 0 0 0 0 0;
+	rename -uid "7A7DD7A2-416B-2937-0028-62A2FCA2A759";
 createNode transform -n "RWingCtrlGrp" -p "BaseRigRNfosterParent1";
 	rename -uid "A780C223-4394-856A-BFE0-6E92FDDBBC6C";
 	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
@@ -9490,62 +9472,24 @@ createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
 		-0.057901392568018628 -1.541020512975467 0.4944072267748183 -0.094553156367727986 
 		-1.6420564638291653 0.14089799207974824 -0.12847120576425586 -1.6839069249600274 
 		0.053982620075360185 -0.13978680743035574 0 0 0 0 0 0 0 0 0;
-createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
-	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
+createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
+	rename -uid "A9713D8D-4975-D17B-8FC1-9AB3D889E836";
+	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
+	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
+	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
+createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
+	rename -uid "699BAE87-4F3C-346D-C8DB-55B3D50CEE86";
+createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
+	rename -uid "CC0B4764-420D-B8E3-B48B-76B28FB1289B";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
-	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
-	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
-	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
-	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
-	setAttr -k on ".w0";
-createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0.86850611262776434 -0.036466827865662924 
+		0.046510701026848622 0.86850611262776312 -0.036466827865662924 0.04651070102685062 
+		0.86850611262776345 -0.036466827865662924 0.046510701026848622 0.86850611262776278 
+		-0.036466827865662924 0.046510701026849101 0.86850611262776345 -0.036466827865662924 
+		0.046510701026848622 0.86850611262776323 -0.036466827865662924 0.04651070102685062 
+		0.86850611262776434 -0.036466827865662924 0.046510701026848622 0.86850611262776445 
+		-0.036466827865662924 0.046510701026849101 0 0 0 0 0 0 0 0 0;
 createNode joint -n "LWingInnerJoint" -p "BaseRigRNfosterParent1";
 	rename -uid "E0A8FB0C-455E-E8D2-77DC-D49FEE7B9DAA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -9590,6 +9534,62 @@ createNode parentConstraint -n "LWingInnerJoint_parentConstraint1" -p "LWingInne
 createNode scaleConstraint -n "LWingInnerJoint_scaleConstraint1" -p "LWingInnerJoint";
 	rename -uid "D6DE14FC-4ACE-32AF-6874-DF8C4E2F77A0";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "LWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
+	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 3;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 4;
+	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
+	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
+	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
+	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
+	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -9950,13 +9950,13 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN"
 		"BaseRigRN" 0
 		"BaseRigRN" 514
-		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"-s -r "
 		0 "|BaseRigRNfosterParent1|RWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
-		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
 		0 "|BaseRigRNfosterParent1|LWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
 		"-s -r "
 		2 "|BaseRig:Root_J" "visibility" " 1"
 		2 "|BaseRig:Root_J" "useObjectColor" " 1"
@@ -10584,121 +10584,121 @@ createNode reference -n "BaseRigRN";
 		"BaseRigRN.placeHolderList[39]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
 		"BaseRigRN.placeHolderList[40]" ""
-		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.message" 
-		"BaseRigRN.placeHolderList[41]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[42]" ""
+		"BaseRigRN.placeHolderList[41]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[43]" ""
+		"BaseRigRN.placeHolderList[42]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[44]" ""
+		"BaseRigRN.placeHolderList[43]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.message" 
-		"BaseRigRN.placeHolderList[45]" ""
+		"BaseRigRN.placeHolderList[44]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[46]" ""
+		"BaseRigRN.placeHolderList[45]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.worldMatrix" 
-		"BaseRigRN.placeHolderList[47]" ""
+		"BaseRigRN.placeHolderList[46]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j.objectColorRGB" 
-		"BaseRigRN.placeHolderList[48]" ""
+		"BaseRigRN.placeHolderList[47]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.message" 
-		"BaseRigRN.placeHolderList[49]" ""
+		"BaseRigRN.placeHolderList[48]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[50]" ""
+		"BaseRigRN.placeHolderList[49]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[51]" ""
+		"BaseRigRN.placeHolderList[50]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[52]" ""
+		"BaseRigRN.placeHolderList[51]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.message" 
-		"BaseRigRN.placeHolderList[53]" ""
+		"BaseRigRN.placeHolderList[52]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[54]" ""
+		"BaseRigRN.placeHolderList[53]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[55]" ""
+		"BaseRigRN.placeHolderList[54]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[56]" ""
+		"BaseRigRN.placeHolderList[55]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.message" 
-		"BaseRigRN.placeHolderList[57]" ""
+		"BaseRigRN.placeHolderList[56]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[58]" ""
+		"BaseRigRN.placeHolderList[57]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[59]" ""
+		"BaseRigRN.placeHolderList[58]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeLid_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[60]" ""
+		"BaseRigRN.placeHolderList[59]" ""
 		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.inMesh" 
-		"BaseRigRN.placeHolderList[61]" ""
+		"BaseRigRN.placeHolderList[60]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.instObjGroups" 
-		"BaseRigRN.placeHolderList[62]" ":initialShadingGroup.dsm"
+		"BaseRigRN.placeHolderList[61]" ":initialShadingGroup.dsm"
 		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_L|BaseRig:EyeMesh_L|BaseRig:EyeMesh_LShape.uvSet[0].uvSetTweakLocation" 
-		"BaseRigRN.placeHolderList[63]" ""
+		"BaseRigRN.placeHolderList[62]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.message" 
-		"BaseRigRN.placeHolderList[64]" ""
+		"BaseRigRN.placeHolderList[63]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[65]" ""
+		"BaseRigRN.placeHolderList[64]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[66]" ""
+		"BaseRigRN.placeHolderList[65]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[67]" ""
+		"BaseRigRN.placeHolderList[66]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.message" 
-		"BaseRigRN.placeHolderList[68]" ""
+		"BaseRigRN.placeHolderList[67]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[69]" ""
+		"BaseRigRN.placeHolderList[68]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.worldMatrix" 
-		"BaseRigRN.placeHolderList[70]" ""
+		"BaseRigRN.placeHolderList[69]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeLid_J_R.objectColorRGB" 
-		"BaseRigRN.placeHolderList[71]" ""
+		"BaseRigRN.placeHolderList[70]" ""
 		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.inMesh" 
-		"BaseRigRN.placeHolderList[72]" ""
+		"BaseRigRN.placeHolderList[71]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.instObjGroups" 
-		"BaseRigRN.placeHolderList[73]" ":initialShadingGroup.dsm"
+		"BaseRigRN.placeHolderList[72]" ":initialShadingGroup.dsm"
 		5 4 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Eye_J_R|BaseRig:EyeMesh_R|BaseRig:EyeMesh_RShape.uvSet[0].uvSetTweakLocation" 
-		"BaseRigRN.placeHolderList[74]" ""
+		"BaseRigRN.placeHolderList[73]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.message" 
-		"BaseRigRN.placeHolderList[75]" ""
+		"BaseRigRN.placeHolderList[74]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[76]" ""
+		"BaseRigRN.placeHolderList[75]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.worldMatrix" 
-		"BaseRigRN.placeHolderList[77]" ""
+		"BaseRigRN.placeHolderList[76]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:head_J|BaseRig:Jaw_J.objectColorRGB" 
-		"BaseRigRN.placeHolderList[78]" ""
+		"BaseRigRN.placeHolderList[77]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.message" 
-		"BaseRigRN.placeHolderList[79]" ""
+		"BaseRigRN.placeHolderList[78]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[80]" ""
+		"BaseRigRN.placeHolderList[79]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.worldMatrix" 
-		"BaseRigRN.placeHolderList[81]" ""
+		"BaseRigRN.placeHolderList[80]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L.objectColorRGB" 
-		"BaseRigRN.placeHolderList[82]" ""
+		"BaseRigRN.placeHolderList[81]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[83]" ""
+		"BaseRigRN.placeHolderList[82]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.message" 
-		"BaseRigRN.placeHolderList[84]" ""
+		"BaseRigRN.placeHolderList[83]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[85]" ""
+		"BaseRigRN.placeHolderList[84]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[86]" ""
+		"BaseRigRN.placeHolderList[85]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[87]" ""
+		"BaseRigRN.placeHolderList[86]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[88]" ""
+		"BaseRigRN.placeHolderList[87]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[89]" ""
+		"BaseRigRN.placeHolderList[88]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[90]" ""
+		"BaseRigRN.placeHolderList[89]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[91]" ""
+		"BaseRigRN.placeHolderList[90]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[92]" ""
+		"BaseRigRN.placeHolderList[91]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[93]" ""
+		"BaseRigRN.placeHolderList[92]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK.objectColorRGB" 
-		"BaseRigRN.placeHolderList[94]" ""
+		"BaseRigRN.placeHolderList[93]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.lockInfluenceWeights" 
-		"BaseRigRN.placeHolderList[95]" ""
+		"BaseRigRN.placeHolderList[94]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.message" 
-		"BaseRigRN.placeHolderList[96]" ""
+		"BaseRigRN.placeHolderList[95]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.worldMatrix" 
-		"BaseRigRN.placeHolderList[97]" ""
+		"BaseRigRN.placeHolderList[96]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_L|BaseRig:Shoulder_J_L2_RK|BaseRig:Shoulder_J_L_RK|BaseRig:Elbow_J_L_RK|BaseRig:Wrist_J_L_RK.objectColorRGB" 
+		"BaseRigRN.placeHolderList[97]" ""
+		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
 		"BaseRigRN.placeHolderList[98]" ""
 		5 3 "BaseRigRN" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j|BaseRig:UpperBack_j|BaseRig:Clavical_J_R.message" 
 		"BaseRigRN.placeHolderList[99]" ""
@@ -12159,7 +12159,7 @@ createNode skinCluster -n "skinCluster1";
 		1 11 1
 		1 11 1
 		2 11 0.99997661179863473 22 2.3388201365306594e-05
-		3 11 0.89803922176361084 17 0.1014836972023706 18 0.00047708103401855606
+		3 11 0.99867350672908839 17 0.00079595053102821112 18 0.00053054273988343171
 		2 11 0.99998593330383301 17 1.4066696166992188e-05
 		3 10 2.0799714893228583e-06 11 0.99997496604919434 16 2.2953979316341205e-05
 		2 11 0.93197135244912988 22 0.068028647550870167
@@ -12226,7 +12226,7 @@ createNode skinCluster -n "skinCluster1";
 		3 11 0.99846476316452026 17 6.2547941756703452e-07 29 0.0015346113560621693
 		3 11 0.99741295908540362 18 0.00083899198137352496 19 0.0017480489332228899
 		3 11 0.99883226359670219 18 3.5018814381382543e-05 19 0.0011327175889164209
-		2 11 0.99946844577789307 17 0.00053155422210693359
+		2 11 0.99995205589584657 17 4.7944104153430089e-05
 		1 11 1
 		2 10 0.0037677884101867676 11 0.99623221158981323
 		1 11 1
@@ -12256,7 +12256,7 @@ createNode skinCluster -n "skinCluster1";
 		2 11 0.99997686090682691 22 2.3139093173085712e-05
 		2 11 0.99986392259597778 23 0.0001360774040222168
 		3 11 0.99997473849552687 23 2.1549317719559761e-05 24 3.7121867535461206e-06;
-	setAttr ".wl[1240:1456].w"
+	setAttr ".wl[1240:1455].w"
 		3 11 0.99822833459831672 22 9.5944260173568509e-05 23 0.0016757211415097117
 		3 11 0.99924373626708984 23 0.00037813186645507807 24 0.00037813186645507818
 		3 11 0.99941636807333267 16 9.7518650101919031e-05 22 0.00048611327656544745
@@ -12273,8 +12273,8 @@ createNode skinCluster -n "skinCluster1";
 		3 9 8.6572432556053514e-10 17 2.0764973699203287e-05 29 0.99997923416057644
 		1 29 1
 		2 9 9.6813053573896468e-08 29 0.99999990318694643
-		3 9 1.9890345370754403e-08 11 0.87359280097833913 17 0.12640717913131549
-		3 9 4.2333501149016683e-09 11 0.99999999518142524 17 5.8522467902506594e-10
+		3 9 2.2768268183313767e-08 11 0.99999244884568217 17 7.5283860496710986e-06
+		3 9 4.2333501171556718e-09 11 0.99999999571386489 17 5.2784967369268188e-11
 		1 29 1
 		1 29 1
 		1 29 1
@@ -12301,8 +12301,8 @@ createNode skinCluster -n "skinCluster1";
 		2 19 9.2983245849609375e-06 29 0.99999070167541504
 		1 29 1
 		2 9 1.1075860228970669e-08 29 0.99999998892413977
-		2 9 0.004011545330286026 17 0.99598845466971397
-		3 9 4.460666241357103e-05 10 0.99993981621205397 17 1.5577125532424326e-05
+		2 9 0.99984290116117336 17 0.00015709883882664144
+		3 9 0.99182688757077497 10 5.6964113668941902e-07 17 0.0081725427880883217
 		2 9 0.0019408464431762695 29 0.99805915355682373
 		2 18 5.9642825400718635e-11 29 0.99999999994035715
 		1 29 1
@@ -12330,7 +12330,7 @@ createNode skinCluster -n "skinCluster1";
 		2 19 0.030799288302659988 29 0.96920071169734001
 		2 17 0.0010713614756241441 29 0.99892863852437586
 		3 9 8.9110602857545018e-05 10 0.001617598350424327 29 0.99829329104671816
-		3 9 9.734396735439077e-05 10 0.9991946638423439 17 0.00070799219030171401
+		2 9 0.96137387385415241 10 0.03862612614584765
 		1 29 1
 		2 19 4.8178696943068644e-07 29 0.99999951821303057
 		3 9 0.0030761160887777805 19 4.0232793999355878e-05 29 0.99688365111722288
@@ -12358,7 +12358,7 @@ createNode skinCluster -n "skinCluster1";
 		2 19 2.4520261376892449e-08 29 0.99999997547973862
 		1 29 1
 		3 9 3.1372688681585714e-05 10 0.00062846752425676665 29 0.9993401597870617
-		1 10 1
+		3 9 0.99943463157939949 10 0.00044749394185380684 17 0.00011787447874667123
 		1 29 1
 		1 29 1
 		3 9 0.0007253431386205851 19 1.7420054287953235e-09 29 0.99927465511937397
@@ -12386,7 +12386,7 @@ createNode skinCluster -n "skinCluster1";
 		1 29 1
 		3 10 4.4256022846411724e-08 19 2.3325055556937996e-06 29 0.99999762323842145
 		3 9 1.7682649366669141e-05 10 9.3690090579912066e-05 29 0.99988862726005345
-		3 9 8.9077189263632324e-07 10 3.538689838933351e-07 29 0.99999875535912353
+		3 9 8.90772207796028e-07 10 6.3934461891346217e-11 29 0.99999910916385781
 		1 29 1
 		2 9 6.3110962855716934e-07 29 0.99999936889037144
 		3 9 3.7554925864448267e-05 19 1.6341847874912219e-09 29 0.99996244343995078
@@ -12414,7 +12414,7 @@ createNode skinCluster -n "skinCluster1";
 		3 9 3.1480024063057499e-06 19 1.4901114284956361e-06 29 0.99999536188616522
 		3 10 9.0723133894243801e-08 19 5.4143545106285793e-05 29 0.99994576573175986
 		3 9 2.5764065633841945e-06 10 2.2700467525282875e-05 29 0.99997472312591129
-		3 9 2.8385134243080756e-08 10 5.191105936307116e-06 29 0.99999478050892943
+		3 9 2.8385281465555999e-08 10 4.5279997529235061e-09 29 0.99999996708671879
 		2 9 3.1034338121571636e-07 29 0.99999968965661878
 		3 9 2.9734634420465611e-06 19 1.4248737443267601e-06 29 0.99999560166281365
 		3 9 5.2790284144066391e-07 20 0.0002104638895973603 29 0.99978900820756123
@@ -12472,10 +12472,9 @@ createNode skinCluster -n "skinCluster1";
 		3 9 3.0751551093999296e-05 10 1.4962954700848979e-05 29 0.99995428549420518
 		3 9 6.8310878305055667e-06 10 6.8066610114859632e-07 29 0.99999248824606835
 		3 9 3.499266313156113e-06 19 1.2792459801291216e-06 29 0.9999952214877067
-		2 9 3.3575158795429161e-06 29 0.99999664248412046
-		1 9 5.0854845312642283e-07;
+		2 9 3.3575158795429161e-06 29 0.99999664248412046;
 	setAttr ".wl[1456:1680].w"
-		1 29 0.99999949145154687
+		2 9 5.0854845312642283e-07 29 0.99999949145154687
 		3 9 5.4228545979973502e-09 21 3.9494441494980492e-08 29 0.9999999550827039
 		2 21 2.3000379201221222e-07 29 0.99999976999620799
 		1 29 1
@@ -12658,14 +12657,14 @@ createNode skinCluster -n "skinCluster1";
 		3 1 0.001840325446953017 9 1.6790718291304074e-05 29 0.99814288383475569
 		3 9 2.4294297129578979e-10 11 0.0043640211326601034 29 0.9956359786243969
 		2 11 4.386667933431454e-05 29 0.99995613332066569
-		3 9 0.00015976923168636858 11 0.91656479268258362 17 0.083275438085730055
+		3 9 0.00017417094254938709 11 0.99918458744600347 17 0.00064124161144718528
 		3 10 0.012864398197369363 11 0.98713556822138615 17 3.3581244451852399e-08
 		3 8 4.3302413258864466e-06 9 9.431239050172735e-06 29 0.99998623851962398
 		3 8 3.6716162867378443e-05 9 2.0149226246696619e-05 29 0.99994313461088591
 		2 9 2.632931136758998e-05 29 0.99997367068863241
 		3 8 9.4329290732275695e-05 9 2.8391370658500715e-05 29 0.99987727933860926
-		3 10 0.00020419165957719088 11 0.9335345587264311 17 0.066261249613991671
-		3 9 4.6071436372585595e-06 11 0.94941630799963628 17 0.050579084856726415
+		2 10 0.00021868178812625897 11 0.99978131821187377
+		3 9 4.8467140994078626e-06 11 0.99878574850071455 17 0.0012094047851860523
 		3 20 1.8336201004890914e-06 29 0.9996122736860148 30 0.00038589269388467073
 		3 20 1.2244165713729223e-05 29 0.99989139869051114 30 9.6357143775094301e-05
 		2 20 0.0015440468461214302 29 0.99845595315387858
@@ -12717,8 +12716,8 @@ createNode skinCluster -n "skinCluster1";
 		3 9 9.4623585643606409e-07 22 0.00067998893791809678 27 0.99931906482622546
 		2 9 4.918629135125079e-05 27 0.9999508137086488
 		3 9 0.00064941862365230918 11 2.2533524522419375e-07 27 0.99935035604110245
-		3 10 3.4780622945577977e-07 11 0.99970177617706801 22 0.00029787601670250297
-		3 10 0.00041201008965680914 11 0.79319430099318311 22 0.20639368891716003
+		3 10 1.1094333388636566e-07 11 0.9999284081282116 22 7.148092845454812e-05
+		3 10 0.00051916048392460932 11 0.99947828339076572 22 2.5561253096384462e-06
 		3 11 2.4982137489151687e-06 22 9.5488801889587194e-05 27 0.99990201298436154
 		1 27 1
 		2 23 7.5926905651613197e-08 27 0.99999992407309435
@@ -12745,8 +12744,8 @@ createNode skinCluster -n "skinCluster1";
 		3 9 6.8680400274719755e-05 22 6.233176463865675e-07 27 0.99993069628207887
 		2 9 1.5724709828465206e-05 27 0.99998427529017153
 		3 9 6.4248225135484802e-08 22 9.0307935352029745e-07 27 0.9999990326724213
-		3 9 0.0046286340802907944 10 0.95750973254593807 22 0.037861633373771159
-		3 9 7.9374196104708972e-08 10 0.00063110661953541156 22 0.99936881400626854
+		3 9 0.97354938804122881 10 0.023089578450217058 22 0.003361033508554101
+		3 9 0.00076598085852434079 10 0.99874687497813164 22 0.00048714416334405541
 		2 11 0.078892259364833336 27 0.92110774063516665
 		3 22 1.0018858838088155e-10 23 2.5713205786814797e-07 27 0.9999997427677535
 		3 22 7.9306649510304033e-08 23 0.00034888417576439679 27 0.99965103651758613
@@ -12773,8 +12772,8 @@ createNode skinCluster -n "skinCluster1";
 		3 9 9.0153290388528262e-10 24 0.019033770747865657 27 0.98096622835060154
 		2 22 0.002152423607185483 27 0.99784757639281452
 		3 9 1.486925521021476e-05 24 0.054986645709580305 27 0.94499848503520945
-		3 9 0.0013337854761630297 10 4.5258632113872306e-05 27 0.99862095589172306
-		3 10 0.0004416173670332946 22 0.35335296392440796 27 0.64620541870855874
+		3 9 0.0013338100968508636 10 2.6800211344379932e-05 27 0.99863938969180477
+		3 10 0.00024608839021876712 22 0.0013860891340300441 27 0.99836782247575118
 		3 11 0.038554638867377651 22 0.00062164838891476393 27 0.96082371274370759
 		3 9 5.6861604710888426e-10 22 1.9757409250309443e-11 27 0.99999999941162654
 		2 24 2.4540981939935591e-06 27 0.99999754590180601
@@ -12801,8 +12800,8 @@ createNode skinCluster -n "skinCluster1";
 		2 24 0.0048014043299038252 27 0.99519859567009616
 		3 9 5.8906121012114454e-06 24 0.0074937533482774118 27 0.99250035603962139
 		3 9 0.00035886854964533677 22 0.0010253917425870895 27 0.99861573970776762
-		3 9 0.0024361882824450731 10 2.0159839653008863e-05 27 0.99754365187790195
-		3 9 0.00031545551610179245 22 0.088134869740907965 27 0.9115496747429902
+		3 9 0.0024361973348582438 10 1.6444104403490201e-05 27 0.99754735856073828
+		3 9 0.0003456241732980235 22 0.00092844880418851972 27 0.9987259270225135
 		3 10 1.4027178737243464e-07 22 0.0088498508557677269 27 0.99115000887244487
 		2 22 1.2531346328614745e-05 27 0.99998746865367139
 		3 9 6.6997611554499115e-08 24 1.9141184193216532e-09 27 0.99999993108827001
@@ -12830,7 +12829,7 @@ createNode skinCluster -n "skinCluster1";
 		3 9 1.1937736417166889e-05 24 0.0026037120419039228 27 0.99738435022167893
 		2 9 0.00011186952222566295 27 0.99988813047777436
 		3 9 0.0015694088386328604 10 1.8778860066959169e-06 27 0.99842871327536042
-		3 9 0.00013122914402933017 22 0.011880381032824516 27 0.98798838982314618
+		3 9 0.00013275744157890834 22 0.00037271782639436424 27 0.99949452473202671
 		3 10 1.0214652833203401e-07 22 2.9782288038404658e-05 27 0.99997011556543325
 		2 24 1.9166984088769823e-07 27 0.99999980833015911
 		3 9 2.2112266604297929e-07 24 9.2790887720184401e-06 27 0.99999049978856192
@@ -13102,8 +13101,8 @@ createNode skinCluster -n "skinCluster1";
 		3 8 2.3811653299629859e-07 9 0.00070448260521516204 27 0.99929527927825179
 		3 9 0.0049227750826770283 11 2.0120450017202529e-07 27 0.99507702371282281
 		2 9 0.0021778304587415512 27 0.99782216954125846
-		2 11 0.88572956621646881 22 0.11427043378353119
-		3 10 0.0051084357710982362 11 0.77998323259628766 22 0.21490833163261414
+		2 11 0.99999999461856692 22 5.3814330769341723e-09
+		3 10 0.006499243525243047 11 0.99233918197228144 22 0.0011615745024755597
 		3 8 9.0577887021936476e-06 9 0.0052466394244328873 27 0.99474430278686488
 		3 8 0.00023596687242388725 9 0.003201242408036137 27 0.99656279071954001
 		3 8 0.00011881461250595748 9 0.0044937625806227063 27 0.99538742280687131
@@ -14574,7 +14573,7 @@ createNode polyTweakUV -n "polyTweakUV2";
 		 -0.37979451 0.26686662 -0.17567755 0.4393611 0.14204811 0.44773602 0.43491337 0.067365825
 		 0.14844345 0.040790871 0.16596581 -0.43874019 -0.15418848 -0.42657414;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "909BABB7-4C5B-9C62-8ABD-EF8D6DBD47AD";
+	rename -uid "53E7189F-412F-2D78-A477-1688C428FC9D";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1611.1663012582926 -44.047617297323995 ;
 	setAttr ".tgi[0].vh" -type "double2" 348.74923267600707 122.61904274660461 ;
@@ -15058,66 +15057,66 @@ connectAttr "BaseRigRN.phl[36]" "skinCluster1.ifcl[8]";
 connectAttr "BaseRigRN.phl[37]" "LWingInnerJoint.is";
 connectAttr "BaseRigRN.phl[38]" "|BaseRigRNfosterParent1|RWingInnerJoint.is";
 connectAttr "BaseRigRN.phl[39]" "bindPose1.m[9]";
-connectAttr "BaseRigRN.phl[40]" "skinCluster1.ptt";
-connectAttr "BaseRigRN.phl[41]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[88].dn";
-connectAttr "BaseRigRN.phl[42]" "skinCluster1.lw[9]";
-connectAttr "BaseRigRN.phl[43]" "skinCluster1.ma[9]";
-connectAttr "BaseRigRN.phl[44]" "skinCluster1.ifcl[9]";
-connectAttr "BaseRigRN.phl[45]" "bindPose1.m[10]";
-connectAttr "BaseRigRN.phl[46]" "skinCluster1.lw[10]";
-connectAttr "BaseRigRN.phl[47]" "skinCluster1.ma[10]";
-connectAttr "BaseRigRN.phl[48]" "skinCluster1.ifcl[10]";
-connectAttr "BaseRigRN.phl[49]" "bindPose1.m[11]";
-connectAttr "BaseRigRN.phl[50]" "skinCluster1.lw[11]";
-connectAttr "BaseRigRN.phl[51]" "skinCluster1.ma[11]";
-connectAttr "BaseRigRN.phl[52]" "skinCluster1.ifcl[11]";
-connectAttr "BaseRigRN.phl[53]" "bindPose1.m[12]";
-connectAttr "BaseRigRN.phl[54]" "skinCluster1.lw[12]";
-connectAttr "BaseRigRN.phl[55]" "skinCluster1.ma[12]";
-connectAttr "BaseRigRN.phl[56]" "skinCluster1.ifcl[12]";
-connectAttr "BaseRigRN.phl[57]" "bindPose1.m[13]";
-connectAttr "BaseRigRN.phl[58]" "skinCluster1.lw[13]";
-connectAttr "BaseRigRN.phl[59]" "skinCluster1.ma[13]";
-connectAttr "BaseRigRN.phl[60]" "skinCluster1.ifcl[13]";
-connectAttr "polyTweakUV1.out" "BaseRigRN.phl[61]";
-connectAttr "BaseRigRN.phl[62]" "lambert8SG.dsm" -na;
-connectAttr "polyTweakUV1.uvtk[0]" "BaseRigRN.phl[63]";
-connectAttr "BaseRigRN.phl[64]" "bindPose1.m[14]";
-connectAttr "BaseRigRN.phl[65]" "skinCluster1.lw[14]";
-connectAttr "BaseRigRN.phl[66]" "skinCluster1.ma[14]";
-connectAttr "BaseRigRN.phl[67]" "skinCluster1.ifcl[14]";
-connectAttr "BaseRigRN.phl[68]" "bindPose1.m[15]";
-connectAttr "BaseRigRN.phl[69]" "skinCluster1.lw[15]";
-connectAttr "BaseRigRN.phl[70]" "skinCluster1.ma[15]";
-connectAttr "BaseRigRN.phl[71]" "skinCluster1.ifcl[15]";
-connectAttr "polyTweakUV2.out" "BaseRigRN.phl[72]";
-connectAttr "BaseRigRN.phl[73]" "lambert7SG.dsm" -na;
-connectAttr "polyTweakUV2.uvtk[0]" "BaseRigRN.phl[74]";
-connectAttr "BaseRigRN.phl[75]" "bindPose1.m[16]";
-connectAttr "BaseRigRN.phl[76]" "skinCluster1.lw[16]";
-connectAttr "BaseRigRN.phl[77]" "skinCluster1.ma[16]";
-connectAttr "BaseRigRN.phl[78]" "skinCluster1.ifcl[16]";
-connectAttr "BaseRigRN.phl[79]" "bindPose1.m[17]";
-connectAttr "BaseRigRN.phl[80]" "skinCluster1.lw[17]";
-connectAttr "BaseRigRN.phl[81]" "skinCluster1.ma[17]";
-connectAttr "BaseRigRN.phl[82]" "skinCluster1.ifcl[17]";
-connectAttr "BaseRigRN.phl[83]" "skinCluster1.lw[18]";
-connectAttr "BaseRigRN.phl[84]" "bindPose1.m[18]";
-connectAttr "BaseRigRN.phl[85]" "skinCluster1.ma[18]";
-connectAttr "BaseRigRN.phl[86]" "skinCluster1.ifcl[18]";
-connectAttr "BaseRigRN.phl[87]" "skinCluster1.lw[19]";
-connectAttr "BaseRigRN.phl[88]" "bindPose1.m[19]";
-connectAttr "BaseRigRN.phl[89]" "skinCluster1.ma[19]";
-connectAttr "BaseRigRN.phl[90]" "skinCluster1.ifcl[19]";
-connectAttr "BaseRigRN.phl[91]" "skinCluster1.lw[20]";
-connectAttr "BaseRigRN.phl[92]" "bindPose1.m[20]";
-connectAttr "BaseRigRN.phl[93]" "skinCluster1.ma[20]";
-connectAttr "BaseRigRN.phl[94]" "skinCluster1.ifcl[20]";
-connectAttr "BaseRigRN.phl[95]" "skinCluster1.lw[21]";
-connectAttr "BaseRigRN.phl[96]" "bindPose1.m[21]";
-connectAttr "BaseRigRN.phl[97]" "skinCluster1.ma[21]";
-connectAttr "BaseRigRN.phl[98]" "skinCluster1.ifcl[21]";
-connectAttr "BaseRigRN.phl[99]" "bindPose1.m[22]";
+connectAttr "BaseRigRN.phl[40]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[88].dn";
+connectAttr "BaseRigRN.phl[41]" "skinCluster1.lw[9]";
+connectAttr "BaseRigRN.phl[42]" "skinCluster1.ma[9]";
+connectAttr "BaseRigRN.phl[43]" "skinCluster1.ifcl[9]";
+connectAttr "BaseRigRN.phl[44]" "bindPose1.m[10]";
+connectAttr "BaseRigRN.phl[45]" "skinCluster1.lw[10]";
+connectAttr "BaseRigRN.phl[46]" "skinCluster1.ma[10]";
+connectAttr "BaseRigRN.phl[47]" "skinCluster1.ifcl[10]";
+connectAttr "BaseRigRN.phl[48]" "bindPose1.m[11]";
+connectAttr "BaseRigRN.phl[49]" "skinCluster1.lw[11]";
+connectAttr "BaseRigRN.phl[50]" "skinCluster1.ma[11]";
+connectAttr "BaseRigRN.phl[51]" "skinCluster1.ifcl[11]";
+connectAttr "BaseRigRN.phl[52]" "bindPose1.m[12]";
+connectAttr "BaseRigRN.phl[53]" "skinCluster1.lw[12]";
+connectAttr "BaseRigRN.phl[54]" "skinCluster1.ma[12]";
+connectAttr "BaseRigRN.phl[55]" "skinCluster1.ifcl[12]";
+connectAttr "BaseRigRN.phl[56]" "bindPose1.m[13]";
+connectAttr "BaseRigRN.phl[57]" "skinCluster1.lw[13]";
+connectAttr "BaseRigRN.phl[58]" "skinCluster1.ma[13]";
+connectAttr "BaseRigRN.phl[59]" "skinCluster1.ifcl[13]";
+connectAttr "polyTweakUV1.out" "BaseRigRN.phl[60]";
+connectAttr "BaseRigRN.phl[61]" "lambert8SG.dsm" -na;
+connectAttr "polyTweakUV1.uvtk[0]" "BaseRigRN.phl[62]";
+connectAttr "BaseRigRN.phl[63]" "bindPose1.m[14]";
+connectAttr "BaseRigRN.phl[64]" "skinCluster1.lw[14]";
+connectAttr "BaseRigRN.phl[65]" "skinCluster1.ma[14]";
+connectAttr "BaseRigRN.phl[66]" "skinCluster1.ifcl[14]";
+connectAttr "BaseRigRN.phl[67]" "bindPose1.m[15]";
+connectAttr "BaseRigRN.phl[68]" "skinCluster1.lw[15]";
+connectAttr "BaseRigRN.phl[69]" "skinCluster1.ma[15]";
+connectAttr "BaseRigRN.phl[70]" "skinCluster1.ifcl[15]";
+connectAttr "polyTweakUV2.out" "BaseRigRN.phl[71]";
+connectAttr "BaseRigRN.phl[72]" "lambert7SG.dsm" -na;
+connectAttr "polyTweakUV2.uvtk[0]" "BaseRigRN.phl[73]";
+connectAttr "BaseRigRN.phl[74]" "bindPose1.m[16]";
+connectAttr "BaseRigRN.phl[75]" "skinCluster1.lw[16]";
+connectAttr "BaseRigRN.phl[76]" "skinCluster1.ma[16]";
+connectAttr "BaseRigRN.phl[77]" "skinCluster1.ifcl[16]";
+connectAttr "BaseRigRN.phl[78]" "bindPose1.m[17]";
+connectAttr "BaseRigRN.phl[79]" "skinCluster1.lw[17]";
+connectAttr "BaseRigRN.phl[80]" "skinCluster1.ma[17]";
+connectAttr "BaseRigRN.phl[81]" "skinCluster1.ifcl[17]";
+connectAttr "BaseRigRN.phl[82]" "skinCluster1.lw[18]";
+connectAttr "BaseRigRN.phl[83]" "bindPose1.m[18]";
+connectAttr "BaseRigRN.phl[84]" "skinCluster1.ma[18]";
+connectAttr "BaseRigRN.phl[85]" "skinCluster1.ifcl[18]";
+connectAttr "BaseRigRN.phl[86]" "skinCluster1.lw[19]";
+connectAttr "BaseRigRN.phl[87]" "bindPose1.m[19]";
+connectAttr "BaseRigRN.phl[88]" "skinCluster1.ma[19]";
+connectAttr "BaseRigRN.phl[89]" "skinCluster1.ifcl[19]";
+connectAttr "BaseRigRN.phl[90]" "skinCluster1.lw[20]";
+connectAttr "BaseRigRN.phl[91]" "bindPose1.m[20]";
+connectAttr "BaseRigRN.phl[92]" "skinCluster1.ma[20]";
+connectAttr "BaseRigRN.phl[93]" "skinCluster1.ifcl[20]";
+connectAttr "BaseRigRN.phl[94]" "skinCluster1.lw[21]";
+connectAttr "BaseRigRN.phl[95]" "bindPose1.m[21]";
+connectAttr "BaseRigRN.phl[96]" "skinCluster1.ma[21]";
+connectAttr "BaseRigRN.phl[97]" "skinCluster1.ifcl[21]";
+connectAttr "BaseRigRN.phl[98]" "bindPose1.m[22]";
+connectAttr "BaseRigRN.phl[99]" "skinCluster1.ptt";
 connectAttr "BaseRigRN.phl[100]" "skinCluster1.lw[22]";
 connectAttr "BaseRigRN.phl[101]" "skinCluster1.ma[22]";
 connectAttr "BaseRigRN.phl[102]" "skinCluster1.ifcl[22]";
@@ -15276,17 +15275,6 @@ connectAttr "groupId6.id" "mainBody1Shape.iog.og[5].gid";
 connectAttr "tweakSet1.mwc" "mainBody1Shape.iog.og[5].gco";
 connectAttr "skinCluster1.og[0]" "mainBody1Shape.i";
 connectAttr "tweak1.vl[0].vt[0]" "mainBody1Shape.twl";
-connectAttr "LWingCtrl_visibility.o" "LWingCtrl.v";
-connectAttr "LWingCtrl_translateX.o" "LWingCtrl.tx";
-connectAttr "LWingCtrl_translateY.o" "LWingCtrl.ty";
-connectAttr "LWingCtrl_translateZ.o" "LWingCtrl.tz";
-connectAttr "LWingCtrl_rotateX.o" "LWingCtrl.rx";
-connectAttr "LWingCtrl_rotateY.o" "LWingCtrl.ry";
-connectAttr "LWingCtrl_rotateZ.o" "LWingCtrl.rz";
-connectAttr "LWingCtrl_scaleX.o" "LWingCtrl.sx";
-connectAttr "LWingCtrl_scaleY.o" "LWingCtrl.sy";
-connectAttr "LWingCtrl_scaleZ.o" "LWingCtrl.sz";
-connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
 connectAttr "RWingCtrl_translateX.o" "RWingCtrl.tx";
 connectAttr "RWingCtrl_translateY.o" "RWingCtrl.ty";
 connectAttr "RWingCtrl_translateZ.o" "RWingCtrl.tz";
@@ -15298,6 +15286,47 @@ connectAttr "RWingCtrl_scaleY.o" "RWingCtrl.sy";
 connectAttr "RWingCtrl_scaleZ.o" "RWingCtrl.sz";
 connectAttr "RWingCtrl_visibility.o" "RWingCtrl.v";
 connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
+connectAttr "LWingCtrl_visibility.o" "LWingCtrl.v";
+connectAttr "LWingCtrl_translateX.o" "LWingCtrl.tx";
+connectAttr "LWingCtrl_translateY.o" "LWingCtrl.ty";
+connectAttr "LWingCtrl_translateZ.o" "LWingCtrl.tz";
+connectAttr "LWingCtrl_rotateX.o" "LWingCtrl.rx";
+connectAttr "LWingCtrl_rotateY.o" "LWingCtrl.ry";
+connectAttr "LWingCtrl_rotateZ.o" "LWingCtrl.rz";
+connectAttr "LWingCtrl_scaleX.o" "LWingCtrl.sx";
+connectAttr "LWingCtrl_scaleY.o" "LWingCtrl.sy";
+connectAttr "LWingCtrl_scaleZ.o" "LWingCtrl.sz";
+connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
+connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
+connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
+connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
+connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
+connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
+connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
+connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
+connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
+connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
+connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
+connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
+connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
+connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
+connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
+connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
+connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
+connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
+connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
+connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
+		;
+connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "RWingInnerJoint_scaleConstraint1.csx" "|BaseRigRNfosterParent1|RWingInnerJoint.sx"
 		;
 connectAttr "RWingInnerJoint_scaleConstraint1.csy" "|BaseRigRNfosterParent1|RWingInnerJoint.sy"
@@ -15344,36 +15373,6 @@ connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.pim" "RWingInnerJoint_scale
 connectAttr "RWingCtrl.s" "RWingInnerJoint_scaleConstraint1.tg[0].ts";
 connectAttr "RWingCtrl.pm" "RWingInnerJoint_scaleConstraint1.tg[0].tpm";
 connectAttr "RWingInnerJoint_scaleConstraint1.w0" "RWingInnerJoint_scaleConstraint1.tg[0].tw"
-		;
-connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
-connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
-connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
-connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
-connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
-connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
-connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
-connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
-connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
-connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
-connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
-connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
-connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
-connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
-connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
-connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
-connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
-connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
-connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
-		;
-connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";

@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: moth2rigCelebrateAnimation2.ma
-//Last modified: Thu, Aug 06, 2020 07:48:06 PM
+//Last modified: Thu, Aug 06, 2020 08:19:29 PM
 //Codeset: 1252
 file -rdi 1 -ns "BaseRig" -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
 file -r -ns "BaseRig" -dr 1 -rfn "BaseRigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nzoll/OneDrive/Documents/GitHub/Stuffed-Work/NatalieWork/BaseRig.ma";
@@ -14,18 +14,18 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "7A335BCE-40C3-5619-DD73-7788A00DD296";
+fileInfo "UUID" "07DD0E0A-40EB-38D3-DAC3-4C95CB724E88";
 createNode transform -s -n "persp";
 	rename -uid "425F33C5-074E-0DDA-57FF-A083BEB032D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.952166507119494 2.7014202876020241 26.417724216466457 ;
-	setAttr ".r" -type "double3" 722.66164671708611 10442.600000003289 0 ;
+	setAttr ".t" -type "double3" 0.15947045122707237 2.0876286302550815 32.250030821826769 ;
+	setAttr ".r" -type "double3" 723.2616467170651 10439.000000003291 1.9881494807084366e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77E8AA9E-234E-68FC-26D2-21B85028178A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 26.954086408501173;
+	setAttr ".coi" 32.787694668893877;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9451,25 +9451,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "BaseRigRNfosterParent1";
-	rename -uid "7964ACBE-43EE-D193-26A8-0381FB48146C";
-createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
-	rename -uid "A9713D8D-4975-D17B-8FC1-9AB3D889E836";
-	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
-	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
-	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
-createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
-	rename -uid "699BAE87-4F3C-346D-C8DB-55B3D50CEE86";
-createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
-	rename -uid "CC0B4764-420D-B8E3-B48B-76B28FB1289B";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" 0.86850611262776434 -0.036466827865662924 
-		0.046510701026848622 0.86850611262776312 -0.036466827865662924 0.04651070102685062 
-		0.86850611262776345 -0.036466827865662924 0.046510701026848622 0.86850611262776278 
-		-0.036466827865662924 0.046510701026849101 0.86850611262776345 -0.036466827865662924 
-		0.046510701026848622 0.86850611262776323 -0.036466827865662924 0.04651070102685062 
-		0.86850611262776434 -0.036466827865662924 0.046510701026848622 0.86850611262776445 
-		-0.036466827865662924 0.046510701026849101 0 0 0 0 0 0 0 0 0;
+	rename -uid "4EDFA54B-42D2-1F8A-2725-109A4F57DCD1";
 createNode transform -n "RWingCtrlGrp" -p "BaseRigRNfosterParent1";
 	rename -uid "A780C223-4394-856A-BFE0-6E92FDDBBC6C";
 	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
@@ -9488,62 +9470,24 @@ createNode nurbsCurve -n "RWingCtrlShape" -p "RWingCtrl";
 		-0.057901392568018628 -1.541020512975467 0.4944072267748183 -0.094553156367727986 
 		-1.6420564638291653 0.14089799207974824 -0.12847120576425586 -1.6839069249600274 
 		0.053982620075360185 -0.13978680743035574 0 0 0 0 0 0 0 0 0;
-createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
-	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
-	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".uoc" 1;
-	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
-	setAttr ".radi" 0.60801549825361401;
-createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
+createNode transform -n "LWingCtrlGrp" -p "BaseRigRNfosterParent1";
+	rename -uid "A9713D8D-4975-D17B-8FC1-9AB3D889E836";
+	setAttr ".t" -type "double3" 3.0915131568908696 0.74675226211547796 -0.48007553815841797 ;
+	setAttr ".r" -type "double3" 102.20950290840406 75.01852898971697 11.806339248130712 ;
+	setAttr ".s" -type "double3" 0.99999999999999956 1.0000000000000004 0.99999999999999989 ;
+createNode transform -n "LWingCtrl" -p "LWingCtrlGrp";
+	rename -uid "699BAE87-4F3C-346D-C8DB-55B3D50CEE86";
+createNode nurbsCurve -n "LWingCtrlShape" -p "LWingCtrl";
+	rename -uid "CC0B4764-420D-B8E3-B48B-76B28FB1289B";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
-	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
-	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
-	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
-	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
-	setAttr -k on ".w0";
-createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
-	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0.86850611262776434 -0.036466827865662924 
+		0.046510701026848622 0.86850611262776312 -0.036466827865662924 0.04651070102685062 
+		0.86850611262776345 -0.036466827865662924 0.046510701026848622 0.86850611262776278 
+		-0.036466827865662924 0.046510701026849101 0.86850611262776345 -0.036466827865662924 
+		0.046510701026848622 0.86850611262776323 -0.036466827865662924 0.04651070102685062 
+		0.86850611262776434 -0.036466827865662924 0.046510701026848622 0.86850611262776445 
+		-0.036466827865662924 0.046510701026849101 0 0 0 0 0 0 0 0 0;
 createNode joint -n "LWingInnerJoint" -p "BaseRigRNfosterParent1";
 	rename -uid "E0A8FB0C-455E-E8D2-77DC-D49FEE7B9DAA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -9588,6 +9532,62 @@ createNode parentConstraint -n "LWingInnerJoint_parentConstraint1" -p "LWingInne
 createNode scaleConstraint -n "LWingInnerJoint_scaleConstraint1" -p "LWingInnerJoint";
 	rename -uid "D6DE14FC-4ACE-32AF-6874-DF8C4E2F77A0";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "LWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "RWingInnerJoint" -p "BaseRigRNfosterParent1";
+	rename -uid "5BD554EA-486B-013F-5523-FB80B72EBB58";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 3;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -102.20950305071493 -75.018526416967134 11.806339248131481 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode joint -n "RWingInnerJoint" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "B3E4C9BA-41DC-9EA2-B1EC-75A10D7A5F85";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 4;
+	setAttr ".t" -type "double3" 3.0882996329032046 -2.4329496750574719e-16 1.3877787807814457e-16 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 -3.1339676357645918 165.34264564260266 ;
+	setAttr ".radi" 0.60801549825361401;
+createNode parentConstraint -n "RWingInnerJoint_parentConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "6E99D861-493F-A3F9-1613-ABA6C26EA138";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.90217058520227722 0.23596241289857645 -0.051057846415946684 ;
+	setAttr ".tg[0].tor" -type "double3" 178.40802721954566 6.0631754091967744 150.60097652654576 ;
+	setAttr ".lr" -type "double3" -9.8597195125368979e-14 2.2263882770244598e-14 -1.2722218725854081e-14 ;
+	setAttr ".rst" -type "double3" 0.50228137862533551 0.74675226211547929 0.45383930206298662 ;
+	setAttr ".rsrr" -type "double3" -1.9083328088781091e-14 6.361109362927028e-15 -1.9083328088781091e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "RWingInnerJoint_scaleConstraint1" -p "|BaseRigRNfosterParent1|RWingInnerJoint";
+	rename -uid "C8D35325-4321-1F54-D382-CCA9D48E516B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RWingCtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -9966,14 +9966,14 @@ createNode reference -n "BaseRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BaseRigRN"
 		"BaseRigRN" 0
-		"BaseRigRN" 542
-		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
-		"-s -r "
+		"BaseRigRN" 546
 		0 "|BaseRigRNfosterParent1|RWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
-		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		0 "|BaseRigRNfosterParent1|LWingInnerJoint" "|BaseRig:Root_J|BaseRig:LowerBack_J|BaseRig:MiddleBack_j" 
 		"-s -r "
 		0 "|BaseRigRNfosterParent1|LWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
+		"-s -r "
+		0 "|BaseRigRNfosterParent1|RWingCtrlGrp" "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL|BaseRig:MiddleBack_j_GRP|BaseRig:MiddleBack_j_CTRL|BaseRig:UpperBack_j_GRP|BaseRig:UpperBack_j_CTRL" 
 		"-s -r "
 		2 "|BaseRig:Root_J" "visibility" " 1"
 		2 "|BaseRig:Root_J" "useObjectColor" " 1"
@@ -10354,6 +10354,10 @@ createNode reference -n "BaseRigRN";
 		"rotateY" " -av"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_FK_Master_Ctrl_Grp|BaseRig:Hip_J_R_CTRL|BaseRig:Knee_J_R_GRP|BaseRig:Knee_J_R_CTRL|BaseRig:Ankle_J_R_GRP|BaseRig:Ankle_J_R_CTRL" 
 		"rotateX" " -av"
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Hip_Ctrl_Grp_R_IK|BaseRig:Hip_Ctrl_R_IK" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Hip_Ctrl_Grp_R_IK|BaseRig:Hip_Ctrl_R_IK" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK" 
@@ -10362,6 +10366,10 @@ createNode reference -n "BaseRigRN";
 		"translateY" " -av"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK" 
 		"translateZ" " -av"
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:Pelvis_J_GRP|BaseRig:Pelvis_J_CTRL|BaseRig:Leg_R_IK_Master_Ctrl_Grp|BaseRig:Ankle_Ctrl_Grp_R_IK|BaseRig:Ankle_Ctrl_R_IK" 
+		"rotateX" " -av"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|BaseRig:Transform_Ctrl_Grp|BaseRig:Transform_Ctrl|BaseRig:Root_J_GRP|BaseRig:Root_J_CTRL|BaseRig:LowerBack_J_GRP|BaseRig:LowerBack_J_CTRL" 
@@ -13536,11 +13544,11 @@ createNode animCurveTL -n "Ankle_Ctrl_R_IK_translateY";
 	rename -uid "F361BC4B-4A7D-B982-7519-4EB9B987AD3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 45 0.39750274113489992 60 0.00030219844756362857
+	setAttr -s 7 ".ktv[0:6]"  0 0 45 0.40752549974675567 60 0.17774727599157827
 		 76 0.32522951547400814 96 0 104 0.35581343267026089 120 0;
 	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kot[1:6]"  1 18 18 1 1 18;
-	setAttr -s 7 ".ktl[1:6]" no no yes no no yes;
+	setAttr -s 7 ".ktl[4:6]" no no yes;
 	setAttr -s 7 ".kix[2:6]"  0.99869754799636468 1 1 1 1;
 	setAttr -s 7 ".kiy[2:6]"  -0.051021638802070557 0 0 0 0;
 	setAttr -s 7 ".kox[1:6]"  0.27850364887814733 1 1 0.51090983208557905 
@@ -13551,7 +13559,8 @@ createNode animCurveTL -n "Ankle_Ctrl_R_IK_translateZ";
 	rename -uid "F4A84468-4A6C-C9BE-C92C-9D8090694685";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1.6062311875739536e-16;
+	setAttr -s 4 ".ktv[0:3]"  0 1.6062311875739536e-16 45 0 60 0.86847950834292231
+		 65 0;
 createNode animCurveTU -n "Ankle_Ctrl_R_IK_visibility";
 	rename -uid "9EABB4ED-4236-CECC-8310-908BF3883B5B";
 	setAttr ".tan" 9;
@@ -13597,24 +13606,25 @@ createNode animCurveTL -n "Ankle_Ctrl_L_IK_translateY";
 	rename -uid "2E356A7E-4283-D06D-43B2-C8B35FBC0E26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 45 0.39750274113489947 60 -0.011743339162585187
-		 71 0 82 0.37341166591460251 96 0 104 0.37275692946408268 120 0;
-	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
-	setAttr -s 8 ".kot[1:7]"  1 18 18 18 1 1 18;
-	setAttr -s 8 ".ktl[1:7]" no no yes yes no no yes;
-	setAttr -s 8 ".kix[2:7]"  0.99935321266893995 0.99705887441599472 
-		1 1 1 1;
-	setAttr -s 8 ".kiy[2:7]"  -0.035960482870347164 0.076639421633448779 
-		0 0 0 0;
-	setAttr -s 8 ".kox[1:7]"  0.23756997446661207 1 0.99705887441599472 
-		1 0.46205840125293463 0.45303919747107718 1;
-	setAttr -s 8 ".koy[1:7]"  -0.9713704274024062 0 0.076639421633448779 
-		0 0.88684949897464682 -0.89149059756946536 0;
+	setAttr -s 10 ".ktv[0:9]"  0 0 45 0.39750274113489947 55 -0.1084926490750532
+		 60 -0.011743339162585187 65 0.20894843454200646 71 0 82 0.37341166591460251 96 0
+		 104 0.37275692946408268 120 0;
+	setAttr -s 10 ".kit[3:9]"  1 18 18 18 18 18 18;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 1 1 
+		18;
+	setAttr -s 10 ".ktl[1:9]" no yes no yes yes yes no no yes;
+	setAttr -s 10 ".kix[3:9]"  0.99935321266893995 1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[3:9]"  -0.035960482870347164 0 0 0 0 0 0;
+	setAttr -s 10 ".kox[1:9]"  0.23756997446661207 1 0.7954494206353957 
+		1 1 1 0.46205840125293463 0.45303919747107718 1;
+	setAttr -s 10 ".koy[1:9]"  -0.9713704274024062 0 0.60601998251774913 
+		0 0 0 0.88684949897464682 -0.89149059756946536 0;
 createNode animCurveTL -n "Ankle_Ctrl_L_IK_translateZ";
 	rename -uid "35A69670-4C9F-B555-4A52-22ABCF6A953A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 7.6495712939698576e-17;
+	setAttr -s 6 ".ktv[0:5]"  0 7.6495712939698576e-17 45 0 55 -1.5162147735853013
+		 60 0 65 0.95266667233065416 71 0;
 createNode animCurveTU -n "Ankle_Ctrl_L_IK_visibility";
 	rename -uid "2D0B4841-485A-2FFD-6CD5-98871117813A";
 	setAttr ".tan" 9;
@@ -14579,7 +14589,7 @@ createNode animCurveTA -n "BaseCharacterSet_head_J_CTRL_rotateZ";
 	rename -uid "DB9B87BF-4C87-3631-8723-68BCC975E72C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 49 0 75 5.393040630536964;
 createNode animCurveTA -n "BaseCharacterSet_Clavical_J_R_CTRL_rotateX";
 	rename -uid "FEA393BE-4D34-A457-5979-24B4BA4636B2";
 	setAttr ".tan" 18;
@@ -14695,8 +14705,8 @@ createNode animCurveTA -n "BaseCharacterSet_Elbow_J_R_CTRL_rotateZ";
 		 120 0;
 	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
 	setAttr -s 5 ".ktl[1:4]" no yes yes yes;
-	setAttr -s 5 ".kox[1:4]"  0.30116236968751131 1 1 1;
-	setAttr -s 5 ".koy[1:4]"  -0.95357287455348838 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  0.15223844194295727 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  -0.98834379483800117 0 0 0;
 createNode animCurveTA -n "BaseCharacterSet_Shoulder_J_R_CTRL_rotateX";
 	rename -uid "63FB44BC-4AD3-28A9-16ED-3BBCE1DE2BA6";
 	setAttr ".tan" 18;
@@ -15543,17 +15553,6 @@ connectAttr "groupId6.id" "mainBody1Shape.iog.og[5].gid";
 connectAttr "tweakSet1.mwc" "mainBody1Shape.iog.og[5].gco";
 connectAttr "skinCluster1.og[0]" "mainBody1Shape.i";
 connectAttr "tweak1.vl[0].vt[0]" "mainBody1Shape.twl";
-connectAttr "LWingCtrl_visibility.o" "LWingCtrl.v";
-connectAttr "LWingCtrl_translateX.o" "LWingCtrl.tx";
-connectAttr "LWingCtrl_translateY.o" "LWingCtrl.ty";
-connectAttr "LWingCtrl_translateZ.o" "LWingCtrl.tz";
-connectAttr "LWingCtrl_rotateX.o" "LWingCtrl.rx";
-connectAttr "LWingCtrl_rotateY.o" "LWingCtrl.ry";
-connectAttr "LWingCtrl_rotateZ.o" "LWingCtrl.rz";
-connectAttr "LWingCtrl_scaleX.o" "LWingCtrl.sx";
-connectAttr "LWingCtrl_scaleY.o" "LWingCtrl.sy";
-connectAttr "LWingCtrl_scaleZ.o" "LWingCtrl.sz";
-connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
 connectAttr "RWingCtrl_translateX.o" "RWingCtrl.tx";
 connectAttr "RWingCtrl_translateY.o" "RWingCtrl.ty";
 connectAttr "RWingCtrl_translateZ.o" "RWingCtrl.tz";
@@ -15565,6 +15564,47 @@ connectAttr "RWingCtrl_scaleY.o" "RWingCtrl.sy";
 connectAttr "RWingCtrl_scaleZ.o" "RWingCtrl.sz";
 connectAttr "RWingCtrl_visibility.o" "RWingCtrl.v";
 connectAttr "makeNurbCircle1.oc" "RWingCtrlShape.cr";
+connectAttr "LWingCtrl_visibility.o" "LWingCtrl.v";
+connectAttr "LWingCtrl_translateX.o" "LWingCtrl.tx";
+connectAttr "LWingCtrl_translateY.o" "LWingCtrl.ty";
+connectAttr "LWingCtrl_translateZ.o" "LWingCtrl.tz";
+connectAttr "LWingCtrl_rotateX.o" "LWingCtrl.rx";
+connectAttr "LWingCtrl_rotateY.o" "LWingCtrl.ry";
+connectAttr "LWingCtrl_rotateZ.o" "LWingCtrl.rz";
+connectAttr "LWingCtrl_scaleX.o" "LWingCtrl.sx";
+connectAttr "LWingCtrl_scaleY.o" "LWingCtrl.sy";
+connectAttr "LWingCtrl_scaleZ.o" "LWingCtrl.sz";
+connectAttr "makeNurbCircle2.oc" "LWingCtrlShape.cr";
+connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
+connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
+connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
+connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
+connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
+connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
+connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
+connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
+connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
+connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
+connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
+connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
+connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
+connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
+connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
+connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
+connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
+connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
+connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
+		;
+connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
+connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
+connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
+connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
+connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "RWingInnerJoint_scaleConstraint1.csx" "|BaseRigRNfosterParent1|RWingInnerJoint.sx"
 		;
 connectAttr "RWingInnerJoint_scaleConstraint1.csy" "|BaseRigRNfosterParent1|RWingInnerJoint.sy"
@@ -15611,36 +15651,6 @@ connectAttr "|BaseRigRNfosterParent1|RWingInnerJoint.pim" "RWingInnerJoint_scale
 connectAttr "RWingCtrl.s" "RWingInnerJoint_scaleConstraint1.tg[0].ts";
 connectAttr "RWingCtrl.pm" "RWingInnerJoint_scaleConstraint1.tg[0].tpm";
 connectAttr "RWingInnerJoint_scaleConstraint1.w0" "RWingInnerJoint_scaleConstraint1.tg[0].tw"
-		;
-connectAttr "LWingInnerJoint_scaleConstraint1.csx" "LWingInnerJoint.sx";
-connectAttr "LWingInnerJoint_scaleConstraint1.csy" "LWingInnerJoint.sy";
-connectAttr "LWingInnerJoint_scaleConstraint1.csz" "LWingInnerJoint.sz";
-connectAttr "LWingInnerJoint_parentConstraint1.ctx" "LWingInnerJoint.tx";
-connectAttr "LWingInnerJoint_parentConstraint1.cty" "LWingInnerJoint.ty";
-connectAttr "LWingInnerJoint_parentConstraint1.ctz" "LWingInnerJoint.tz";
-connectAttr "LWingInnerJoint_parentConstraint1.crx" "LWingInnerJoint.rx";
-connectAttr "LWingInnerJoint_parentConstraint1.cry" "LWingInnerJoint.ry";
-connectAttr "LWingInnerJoint_parentConstraint1.crz" "LWingInnerJoint.rz";
-connectAttr "LWingInnerJoint.s" "LWingOuterJoint.is";
-connectAttr "LWingInnerJoint.ro" "LWingInnerJoint_parentConstraint1.cro";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_parentConstraint1.cpim";
-connectAttr "LWingInnerJoint.rp" "LWingInnerJoint_parentConstraint1.crp";
-connectAttr "LWingInnerJoint.rpt" "LWingInnerJoint_parentConstraint1.crt";
-connectAttr "LWingInnerJoint.jo" "LWingInnerJoint_parentConstraint1.cjo";
-connectAttr "LWingCtrl.t" "LWingInnerJoint_parentConstraint1.tg[0].tt";
-connectAttr "LWingCtrl.rp" "LWingInnerJoint_parentConstraint1.tg[0].trp";
-connectAttr "LWingCtrl.rpt" "LWingInnerJoint_parentConstraint1.tg[0].trt";
-connectAttr "LWingCtrl.r" "LWingInnerJoint_parentConstraint1.tg[0].tr";
-connectAttr "LWingCtrl.ro" "LWingInnerJoint_parentConstraint1.tg[0].tro";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_parentConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_parentConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_parentConstraint1.w0" "LWingInnerJoint_parentConstraint1.tg[0].tw"
-		;
-connectAttr "LWingInnerJoint.ssc" "LWingInnerJoint_scaleConstraint1.tsc";
-connectAttr "LWingInnerJoint.pim" "LWingInnerJoint_scaleConstraint1.cpim";
-connectAttr "LWingCtrl.s" "LWingInnerJoint_scaleConstraint1.tg[0].ts";
-connectAttr "LWingCtrl.pm" "LWingInnerJoint_scaleConstraint1.tg[0].tpm";
-connectAttr "LWingInnerJoint_scaleConstraint1.w0" "LWingInnerJoint_scaleConstraint1.tg[0].tw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
